@@ -1,0 +1,22 @@
+{
+  "name": "adel",
+  "description": "\"# adel.com.tr\"",
+  "main": "index.js",
+  "authors": [
+    ""
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "uikit": "^2.27.4"
+  }
+}

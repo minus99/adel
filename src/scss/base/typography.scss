@@ -1,0 +1,7 @@
+// GOTHAM MEDIUM
+@include font-face("Gotham", "../fonts/Gotham/Gotham-Medium");
+@mixin Gotham { font-family: 'Gotham'; font-weight: 500; }
+
+// GOTHAM BOOK
+@include font-face("GothamBook", "../fonts/Gotham/Gotham-Book");
+@mixin GothamBook {  font-family: 'GothamBook'; font-weight: 300; }

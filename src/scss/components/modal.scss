@@ -1,0 +1,511 @@
+@media (min-width: 1220px){ .uk-modal-dialog-large { width: 1000px; } }
+
+.ems-modal{
+    > div{
+        padding: 30px;
+    }
+    .uk-modal-close{
+        opacity: 1;
+        &:after{
+            font-family: "fontello";
+            content: '\e81a';
+            font-size: 20px;
+            color: $blue;
+        }
+        &.uk-close:first-child{
+            margin: 0 0 0 0;
+        }
+    }
+    .modal-header{
+        margin-bottom: 40px;
+        .title{
+            font-size: 20px;
+            color: #0067a5;
+            text-align: center;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #dadfe3;
+        }
+    }
+    .modal-container{
+
+    }
+    .modal-footer{
+
+    }
+}
+
+// Login
+.login-modal{
+    .login-form-wrapper{
+        > .uk-form{
+            width: 40%;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            .logo{
+                padding-bottom: 0;
+                margin-bottom: 50px;
+                img{
+                    width: calc(100% - 114px);
+                }
+            }
+            .uk-form-row{
+                margin-top: 20px;
+                &::first-child{
+                    margin-top: 0;
+                }
+            }
+            input{
+                height: 50px;
+                padding: 0 20px;
+                font-size: 14px;
+                background: #f4f7fa;
+                border-radius: 5px;
+                
+                &::placeholder {
+                    color: #0090f1;
+                    @include GothamBook;
+                }
+            }
+            .uk-button-secondary{
+                font-size: 18px;
+                border-radius: 5px;
+            }
+            .new-sign{
+                text-decoration: underline;
+                text-decoration-skip: ink;
+                font-size: 18px;
+                color: $blue;
+            }
+        }
+    }
+}
+// Bayi Seçiniz
+.dealer-modal{
+    .dealer-info{
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 40px;
+        i.dealer-ico{
+            font-size: 70px;
+            color: #15a649;
+        }
+        .cold{
+            display: block;
+            color: #0688f4;
+            line-height: 1.5;
+            @include GothamBook;
+        }
+        .dealer-name{
+            color: $black;
+            line-height: 1.5;
+        }
+    }
+    .dealer-search{
+        margin-bottom: 40px;
+        position: relative;
+        width: 33.3%;
+        .dealerSearch{
+            background-color: #f4f7fa;
+            border: solid 1px #dadfe3;
+            width: 100%;
+            &::placeholder {
+                color: $blue;
+            }
+        }
+        .btn-search{
+            position: absolute;
+            right: 20px;
+            top:50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            line-height: 19px;
+            text-align: center;
+            border-radius: 50%;
+            background: #15a649;
+            color: $white;
+            i{
+                font-size: 10px;
+            }
+        }
+    }
+    ul.dealer-list{
+        display: block;
+        background-color: #fcfcfc;
+        border: 1px solid #dadfe3;
+        li{
+            padding: 35px 30px;
+            border-bottom: 1px solid #dadfe3;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            div{
+                .title{
+                    display: block;
+                    font-size: 18px;
+                    color: $black;
+                }
+                .location{
+                    display: block;
+                    font-size: 14px;
+                    color: $grey-dark;
+                    @include GothamBook;
+                }
+                .btn-select{
+                    display: inline-block;
+                    padding: 12px 33px;
+                    border-radius: 5px;
+                    border: 1px solid $green;
+                    font-size: 14px;
+                    color: $green;
+                }
+            }
+            &.selected{
+                div {
+                    .btn-select{
+                        background-color: tint( $green, 10% );
+                        color: $white
+                    }
+                }
+            }
+            &:last-child{
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+//Sipariş Adresi
+.order-address-modal{
+    .add-new-address{
+        display: block;
+        text-align: center;
+        margin-bottom: 40px;
+        .btn-address{
+            display: inline-block;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+    }
+    ul.address-list{
+        display: block;
+        background-color: #fcfcfc;
+        border: 1px solid #dadfe3;
+        li{
+            padding: 20px 30px;
+            border-bottom: 1px solid #dadfe3;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            div{
+                flex: 7;
+                span{
+                    display: block;
+                }
+                .mti{
+                    font-size: 14px;
+                    color: $black;
+                }
+                .title{
+                    font-size: 18px;
+                    color: $black;
+                    margin-bottom: 15px;
+                }
+                .authorized{
+                    font-size: 14px;
+                    color: $grey-dark;
+                }
+                .address{
+                    @include GothamBook; 
+                    margin-bottom: 15px;
+                }
+                .phone{
+                    @include GothamBook;
+                }
+                .btn-edit{
+                    font-size: 14px;
+                    color: $blue-lighteen;
+                    text-decoration: underline;
+                    text-decoration-skip: ink;
+                }
+                .btn-select{
+                    display: inline-block;
+                    padding: 12px 33px;
+                    border-radius: 5px;
+                    border: 1px solid $green;
+                    font-size: 14px;
+                    color: $green;
+                }
+                &:nth-child(2),
+                &:nth-child(3){
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex:1;
+                }
+            }
+            &.selected{
+                div {
+                    .btn-select{
+                        background-color: tint( $green, 10% );
+                        color: $white
+                    }
+                }
+            }
+            &:last-child{
+                border-bottom: none;
+            }
+        }
+    }
+}
+
+//Bayi Değişikliği
+.dealer-change-modal{
+    .warning-desc{
+        width: 45%;
+        margin: 0 auto 30px ;
+        text-align: center;
+        @include GothamBook;
+        font-size: 14px;
+        line-height: 1.43;
+        color: $black;
+    }
+    ul.basket-item{
+        border-top: 1px solid #dadfe3;
+        margin-bottom: 40px;
+        li{
+            padding: 20px 0;
+            border-bottom: 1px solid #dadfe3;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: $black;
+            .prd-img{
+                flex: 1;
+                border: 1px solid #dce1e5;
+                text-align: center;
+                img{
+                    max-height: 56px;
+                }
+            }
+            .prd-info,
+            .prd-piece,
+            .prd-price{
+                flex: 3;
+                display: flex;
+                justify-content: space-around;
+            }
+            .prd-info{
+                padding-left: 10px;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                .code{
+                    @include GothamBook;
+                    font-size: 12px;
+                    line-height: 1.67;
+                    color: #001a8c;
+                    width: 100%;
+                }
+                .title{
+                    line-height: 1.29;
+                }
+            }
+            .prd-piece{
+            }
+            .prd-price{
+                .prd-piece-calc{
+                    .type{
+                        @include GothamBook;
+                        font-size: 12px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+
+    }
+    .go-on{
+        display: block;
+        text-align: center;
+        .btn-confirm{
+            display: inline-block;
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+    }
+}
+
+@media screen and (max-width:960px){
+    .ems-modal{
+        > div{
+            width: 100%;
+            max-width: 100%; 
+            margin: 0;
+            padding: 0;
+            top: 0 !important;
+            min-height: 100vh;
+        }
+        .uk-modal-close{
+            position: inherit;
+            float: inherit !important;
+            width: 100%;
+            text-align: center;
+            margin: 40px 0 30px !important;
+        }
+        .modal-header{
+            margin-bottom: 20px;
+        }
+    }
+
+    //login
+    .login-modal{
+        .uk-modal-close{
+            display: none;
+        }
+        .login-form-wrapper{
+            > .uk-form{
+                width: calc(100% - 40px);
+                margin: 0 20px;
+                .logo{
+                    height: 48vh;
+                    background-color: #f4f7fa;
+                    margin: 0 -20px 50px -20px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .uk-button-secondary{
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    //Bayi seçimi
+    .dealer-modal{
+        .dealer-info{
+            i.dealer-ico{
+                display: none;
+            }
+            .cold{
+                font-size: 14px;
+            }
+            .dealer-name{
+                font-size: 16px;
+            }
+        }
+        .dealer-search{
+            width: calc(100% - 40px);
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
+
+    //Sipariş Adresi
+    .order-address-modal{
+        .modal-header{
+            margin-bottom: 10px;
+            .title{
+                border-bottom: 0;
+            }
+        }
+        .add-new-address{
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-bottom: 45px;
+            .btn-address{
+                display: block;
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+        ul.address-list{
+            li{
+                padding: 20px;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                div{
+                    flex: none;
+                    width: 100%;
+                    &:nth-child(2),
+                    &:nth-child(3){
+                        justify-content: flex-start;
+                        flex:inherit;
+                        width: 25%;
+                        margin-top: 25px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    //Bayi Değişikliği
+    .dealer-change-modal{
+        .modal-header{
+            margin-bottom: 0px;
+            .title{
+                padding-bottom: 20px;
+                border-bottom: 0;
+            }
+        }
+        .warning-desc{
+            width: 86%;
+            font-size: 16px;
+            margin: 0 auto 37px ;
+        }
+        ul.basket-item{
+            li{
+                flex-wrap: wrap;
+                justify-content: flex-end;
+                align-items: flex-start;
+                padding-left: 20px;
+                padding-right: 20px;
+                position: relative;
+                .prd-img{
+                    flex: inherit;
+                    width: 25%;
+                }
+                .prd-info,
+                .prd-piece,
+                .prd-price{
+                    flex: initial;
+                    width: 75%;
+                }
+                .prd-info{
+                    padding-left: 20px;
+                }
+                .prd-piece{
+                    width: 35%;
+                    justify-content: flex-start;
+                    .piece{
+                        display: none;
+                    }
+                }
+                .prd-price{
+                    
+                    width: 35%;
+                    justify-content: flex-end;
+                    .prd-piece-calc{
+                        display: none;
+                    }
+                }
+                &:before{
+                    content: '\e80d';
+                    font-family: "fontello";
+                    font-size: 10px;
+                    color:  #0067a5;
+                    display: inline-block;
+                    position: absolute;
+                    right: 20px;
+                }
+            }
+
+        }
+        .go-on{
+            display: none;
+        }
+    }
+}

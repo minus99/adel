@@ -1,0 +1,845 @@
+.page-order{
+    .adel-header{
+        display: none;
+    }
+}
+.order-page{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: $white;
+    .order-header{
+        width: 100%;
+        height: 90px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: $blue;
+        box-shadow: inset 0 1px 0 0 $grey-light;
+        
+    }
+    .order-content{
+        flex: 1;
+        display: flex;
+        .order-left{
+            width: 67%;
+            padding-right: 56px; 
+            display: flex;
+            flex-wrap: wrap;
+            .page-title{
+                display: none;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 70px;
+
+                font-size: 20px;
+                color: $black;
+            }
+            .order-cat{
+                width: 15%;
+                height: 100%;
+                .order-group{
+                    width: 50px;
+                    height: 100%;
+                    display: flex;
+                    padding-top: 20%;
+                    > span{
+                        display: none;
+                    }
+                    ul{
+                        width: 100%;
+                        li{
+                            margin: 20px 0px;
+                            a{
+                                display: block;
+                                text-align: center;
+                                border-radius: 0 25px 25px 0;
+                                height: 34px;
+                                line-height: 34px;
+                                @include GothamBook;
+                                color: #001a8c;
+                                font-size: 18px;
+                                .short{
+
+                                }
+                                .long{
+                                    display: none;
+                                }
+                            }
+                            &.all-group{
+                                display: none;
+                            }
+                            &.selected{
+                                a{
+                                    background: #0090f1;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .order-box{
+                flex:1;
+                width: 85%;
+                .dealer-info{
+                    display: flex;
+                    align-items: center;
+                    margin: 30px 0;
+                    i.icon-store{
+                        font-size: 50px; 
+                        color: #15a649;
+                        margin-right: 18px;
+                    }
+                    .info{
+                        flex:1;
+                        > span{
+                            display: block;
+                        }
+                        .subTitle{
+                            @include GothamBook;
+                            font-size: 14px;
+                            line-height: 2.14;
+                            color: #0090f1;
+                        }
+                        .title{
+                            font-size: 18px;
+                            color: $black;
+                        }
+                        .address{
+                            @include GothamBook;
+                            font-size: 14px;
+                            color: #444444;
+                        }
+                    }
+                }
+            }
+        }
+        .order-right{
+            width: 33%;
+            background: #f4f7fa;
+            .cart-summary{
+                padding: 44px 0 0;
+                margin-left: 43px;
+                width: 70%;
+                .cart-summary-title{
+                    text-align: center;
+                    > i {
+                        display: block;
+                        font-size: 50px;
+                        color: #0688f4;
+                        margin-bottom: 14px;
+                    }
+                    .title{
+                        display: block;
+                        font-size: 20px;
+                        color: #0067a5;
+                        line-height: 20px;
+                        margin-bottom: 5px;
+                    }
+                    .date{
+                        color: $black;
+                        font-size: 14px;
+                    }
+                }
+                ul.cart-summary-detail{
+                    margin-top: 33px;
+                    margin-bottom: 40px;
+                    li{
+                        border-top: 1px solid #dadfe3;
+                        height: 40px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .title{
+                            @include GothamBook;
+                            font-size: 14px;
+                            color: $black;
+                        }
+                        .numb{
+                            font-size: 14px;
+                            color: $black;
+                        }
+                        &.total{
+                            height: 70px;
+                            .numb{
+                                font-size: 18px;
+                                color: #0067a5;
+                            }
+                        }
+                        &.button{
+                            border: 0;
+                            a.button-submit{
+                                display: inline-block;
+                                width: 100%;
+                                text-align: center;
+                            }
+                        }
+                        &.gain{
+                            height: auto;
+                            border-radius: 8px;
+                            background-color: #ffffff;
+                            border: solid 1px #dadfe3;
+                            padding: 15px;
+                            display: flex;
+                            align-items: center;
+                            text-align: center;
+                            font-size: 12px;
+                            color: #0090f1;
+                            margin-bottom: 15px;
+                            @include GothamBook;
+                        }
+                        &.export{
+                            border: 0;
+                            padding-top: 30px;
+                            a{
+                                color: #a4abb0;
+                                font-size: 14px;
+                                i{
+                                    font-size: 18px;
+                                    margin-right: 12px;
+                                }
+                            }
+                            .to-mail{
+                                i{
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .order-table{
+        .order-row{
+            display: flex;
+            align-items: center;
+            .order-product{
+                width: 35%;
+                padding-left: 20px;
+                padding-right: 20px;
+                text-align: left;
+            }
+            .order-piece-price{
+                width: 15%;
+            }
+            .order-piece{
+                width: 27%;
+            }
+            .order-old{
+                width: 10%;
+            }
+            .order-price{
+                width: 13%;
+            }
+            &.head{
+                > div{
+                    @include GothamBook;
+                    font-size: 12px;
+                    text-align: center;
+                    padding: 14px 0 13px;
+                    border-right: 1px solid #dadfe3;
+                    &:last-child{
+                        border: 0;
+                    }
+                    &.order-product{
+                        padding-left: 20px;
+                        text-align: left;
+                    }
+                }
+                background: #f4f7fa;
+            }
+            &:not(.head){
+                padding: 20px 0;
+                border-bottom: 1px solid #dce1e5;
+                text-align: center;
+                .order-product{
+                    display: flex;
+                    padding-left: 0;
+                    .img{
+                        width: 100px;
+                        height: 55px;
+                        border: 1px solid #dce1e5;
+                        text-align: center;
+                        margin-right: 10px;
+                        img{
+                            height: 100%;
+                        }
+                    }
+                    .title-gr{
+                        flex: 1;
+                        text-align: left;
+                        .code{
+                            display: block;
+                            @include GothamBook;
+                            font-size: 12px;
+                            line-height: 1.67;
+                            color: #001a8c;
+                        }
+                        .title{
+                            font-size: 14px;
+                            line-height: 1.29;
+                            color: #000000;
+                        }
+                        .mob-price{
+                            display: none;
+                        }
+                    }
+                    .sub-btn{
+                        display: none;
+                    }
+                }
+                .order-piece{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    .inp{
+                        width: 50px;
+                        input{
+                            width: 100%;
+                            outline: 0;
+                            border: 0;
+                            border-radius: 5px;
+                            background-color: #eeeeee;
+                            padding: 0 10px !important;
+                            @include GothamBook;
+                            font-size: 14px;
+                            text-align: center;
+                        }
+                        &.inp-num{
+                            position: relative;
+                            .counter-btn{
+                                position: absolute;
+                                left: 50%;
+                                transform: translateX(-50%);
+
+                                font-size: 8px;
+                                color: #bdbdbd;
+                                &.bottom-btn{
+                                    bottom: 0;
+                                }
+                            }
+                        }
+                    }
+                    
+                    .type{
+                        .name{
+                            @include GothamBook;
+                            font-size: 12px;
+                            margin-right: 10px;
+                        }
+                        .price{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            &.title{
+                background: #f4f7fa;
+                margin-top: 10px;
+                font-size: 14px;
+                color: #0067a5;
+                padding: 13px 20px 12px;
+                border: 0;
+            }
+        }
+        .cart-order-items{
+            margin-bottom: 100px;
+        }
+    }
+    
+}
+
+
+@media screen and (max-width: 960px){
+
+    .page-order{
+        .adel-header{
+            display: block;
+        }
+    }
+    .order-page{
+        flex-direction: row;
+        .order-header{
+            display: none;
+            
+        }
+        .order-content{
+            flex-wrap: wrap;
+            .order-left{
+                width: 100%;
+                padding-right: 0px;
+                flex-wrap: wrap;
+                .page-title{
+                    display: flex;
+                }
+                .order-cat{
+                    width: 100%;
+                    height: 60px;
+                    .order-group{
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        padding-top: 0;
+                        > span{
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            padding: 0 20px;
+                            cursor: pointer;
+                            background: $blue;
+                            color: $white;
+
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            &:after{
+                                content: '\e815';
+                                font-family: "fontello";
+                                font-style: normal;
+                                font-size: 9px;
+                            }
+                        }
+                        ul{
+                            display: none;
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            top: 100%;
+                            z-index: 15;
+                            background: #f4f7fa;
+                            li{
+                                margin: 0px;
+                                a{
+                                    position: relative;
+                                    text-align: left;
+                                    padding: 15px 20px;
+                                    border-radius: 0;
+                                    height: auto;
+                                    font-size: 16px;
+                                    color: #0067a5;
+                                    @include Gotham;
+                                    .short{
+                                        display: none;
+                                    }
+                                    .long{
+                                        display: block;
+                                    }
+                                    &:after{
+                                        content:"";
+                                        width: calc(100% - 40px);
+                                        height: 1px;
+                                        display: block;
+                                        background: #dadfe3;
+                                        position: absolute;
+                                        bottom: 0;
+                                    }
+                                    
+                                }
+                                &:last-child{
+                                    border-bottom: 1px solid #dadfe3;
+                                    a:after{
+                                        content:none;
+                                    }
+                                } 
+                                &.all-group{
+                                    display: block;
+                                }
+                                &.selected{
+                                    a{
+                                        background: none;
+                                        color: #0067a5;
+                                    }
+                                }
+                            }
+                        }
+                        &.opened{
+                            ul{
+                                display: block;
+                            }
+                        }
+                    }
+                }
+                .order-box{
+                    .dealer-info{
+                        display: none;
+                    }
+                }
+            }
+            .order-right{
+                width: 100%;
+                .cart-summary{
+                    width: 100%;
+                    margin-left: 0;
+                    padding: 0 20px;
+                    .cart-summary-title{
+                        display: none;
+                    }
+                    ul.cart-summary-detail{
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-top: 0;
+                        margin-bottom: 50px;
+                        li{
+                            width: 100%;
+                            &.total{
+                                height: 40px;
+                                border-bottom: 1px solid #dadfe3;
+                            }
+                            &.button{
+                                order: 7;
+                                display: flex;
+                                margin: 0 -20px 0 -20px;
+                                width: calc(100% + 40px);
+                                position: fixed;
+                                bottom: 10px;
+                                z-index: 20;
+                                a.button-submit{
+                                    width: 100%;
+                                    padding: 20px 0;
+                                    border-radius: 0;
+                                }
+                            }
+                            &.export{
+                                padding: 30px 0px;
+                                margin-top: 10px;
+                                margin-bottom: 12px;
+                            }
+                            &.gain{
+                                display: none;
+                            }
+                            &:first-child{
+                                border: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .order-table{
+            .order-row{
+                .order-product{
+                    width: 100%;
+                    flex-wrap: wrap;
+                    padding: 0;
+                    position: relative;
+                    .img{
+                        margin-top: 5px;
+                    }
+                    .sub-btn{
+                        display: inline-block !important;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        margin: -20px;
+                        padding: 20px;
+                        text-align: right;
+                        i:before{
+                            content: '\e80d';
+                            font-family: "fontello";
+                            font-style: normal;
+                            font-size: 9px;
+                        }
+                    }
+                }
+                .order-piece-price{
+                    width: 20%;
+                    margin-top: 40px;
+                    text-align: left;
+                    display: none;
+                }
+                .order-piece{
+                    flex: 1;
+                    justify-content: space-between;
+                    margin-top: 40px;
+                }
+                .order-old{
+                    display: none;
+                }
+                .order-price{
+                    display: none;
+                }
+                &.head{
+                    display: none;
+                }
+                &:not(.head){
+                    flex-wrap: wrap;
+                    padding: 20px;
+                    .order-product{
+                        .mob-price{
+                            display: flex;
+                            justify-content: space-between;
+                            margin-top: 8px;
+                        }
+                    }
+                    .order-piece{
+                        justify-content: space-between;
+                        
+                        display: none;
+                        .inp{
+                            width: initial;
+                            display: flex;
+                            input{
+                                width: 50px;
+                            }
+                            &.inp-num{
+                                position: relative;
+                                .counter-btn{
+                                    position: initial;
+                                    width: 50px;
+                                    background-color: #a5adb3;
+                                    transform: initial;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    color: #fff;
+                                    border-radius: 5px 0 0 5px;
+                                    &.bottom-btn{
+                                        border-radius: 0 5px 5px 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.title{
+                    display: none;
+                }
+                &.opened{
+                    .order-piece-price,
+                    .order-piece{
+                        display: flex;
+                    }
+                    .sub-btn{
+                        i:before{
+                            content: '\e80b';
+                        }
+                    }
+                }
+            }
+            .cart-order-items{
+                margin-bottom: 0;
+            }
+        }
+    }
+
+
+}
+
+//Basket 3
+.order-complete{
+    background: $body;
+    .order-step-content{
+        width: 46%;
+        margin: 45px auto;
+        text-align: center;
+        background: $white;
+        padding: 60px;
+        .comp-info{
+            color: $black;
+            i{
+                display: inline-block;
+                font-size: 50px;
+                color: $green;
+                margin-bottom: 20px;
+            }
+            .subTitle{
+                display: block;
+                @include GothamBook;
+                font-size: 16px;
+                line-height: 1.88;
+            }
+            .title{
+                display: block;
+                font-size: 20px;
+            }
+            .address{
+                @include GothamBook;
+                font-size: 16px;
+            }
+        }
+        .baset-desc{
+            color: $black;
+            margin: 50px 0;
+            > i{
+                display: inline-block;
+                font-size: 50px;
+                color: #0688f4;
+                margin-bottom: 20px;
+            }
+            .title{
+                @include GothamBook;
+                font-size: 16px;
+                display: block;
+            }
+            .total-price{
+                font-size: 20px;
+            }
+        }
+        .thanks-desc{
+            > i{
+                display: inline-block;
+                font-size: 50px;
+                color: #0688f4;
+            }
+            .title{
+                display: block;
+                font-size: 30px;
+                color: #0067a5;
+                margin: 30px 0;
+            }
+            .desc{
+                display: block;
+                @include GothamBook;
+                font-size: 16px;
+                line-height: 1.44;
+                color: #444444;
+            }
+        }
+        .btn-confirm{
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+        .btn-export{
+            display: inline-block;
+            width: 60%;
+            margin: 40px 0 30px;
+        }
+        .btn-return{
+            font-size: 14px;
+            color: #0090f1;
+            text-decoration: underline;
+            text-decoration-skip: ink;
+        }
+    }
+}
+
+
+@media screen and (max-width:960px){
+    .order-complete{
+        background: $body;
+        min-height: auto;
+        .order-step-content{
+            width: 100%;
+            margin: 0;
+            text-align: center;
+            padding: 20px;
+            background: $body;
+            .btn-confirm{
+                display: block;
+                padding-left: 0px;
+                padding-right: 0px;
+                width: 100%;
+                text-align: center;
+            }
+        }
+        
+    }
+}
+
+
+
+.opportunity-product-wrapper{
+    padding: 0 30px;
+    margin-bottom: 40px;
+    margin-top: -50px;
+    .prd-news-title{
+        margin: 35px 0 38px;
+        font-size: 18px;
+        color: $black;
+        text-transform: uppercase;
+    }
+    .opportunity-product{
+        margin-left: -14px;
+        li{
+            padding-left: 10px !important;
+        }
+        .item{
+            margin-left: 4px;
+            padding: 20px;
+            background-color: $white;
+            border: solid 1px $grey-light;
+            position: relative;
+            .ico{
+                width: 26px;
+                position: absolute;
+                top:10px;
+                left: -5px;
+            }
+            .prd-img{
+                text-align: center;
+                border-bottom: 1px solid $grey-lighter;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+            }
+            .prd-info span{
+                @include GothamBook;
+                font-size: 12px;
+                line-height: 1.67;
+                color: $blue-dark;
+            }
+            .prd-title{
+                font-size: 14px;
+                color: $black;
+                margin-top: 7px;
+            }
+            .prd-price-wrapper{
+                margin-top: 25px;
+                .prd-price{
+                    width: 50%;
+                    > span{
+                        display: block;
+                        &.name{
+                            @include GothamBook;
+                            font-size: 12px;
+                            color: $black;
+                            line-height: 0.8;
+                        }
+                        &.price{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            .btn{
+                width: 100%;
+                margin-top: 15px;
+                .btn-opp{
+                    display: block;
+                    width: 100%;
+                    padding: 13px 0 12px;
+                    text-align: center;
+                    border-radius: 5px;
+                    border: 1px solid #15a649;
+                    @include Gotham;
+                    font-size: 14px;
+                    color: #15a649;
+                }
+            }
+        }
+    }
+    .uk-slidenav{
+        font-size: 25px;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        margin-top: 0;
+        transform: translateY(-50%);
+    }
+    &.uk-slidenav-position .uk-slidenav-previous{ left: 0 !important; }
+    &.uk-slidenav-position .uk-slidenav-next{ right: 0 !important; }
+    &.uk-slidenav-position .uk-slidenav{ display: block !important; }
+    .uk-slidenav-contrast { color: $blue; }
+    .uk-slidenav-contrast:hover, .uk-slidenav-contrast:focus{ color: $blue-dark; }
+}
+@media screen and (max-width:960px){
+    .opportunity-product-wrapper{display: none;}
+}

@@ -1,0 +1,976 @@
+.page-banner-full{
+    position: relative;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    max-height: 250px;
+    > img{
+        width: 100%;
+    }
+    > .desc{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 28px;
+        color: $white;
+    }
+}
+
+.mobile-filter-wrp{
+    display: none;
+}
+
+.prd-list{
+    display: flex;
+    .prd-filter-wrp{
+        .header{
+            display: none;
+        }
+        .content{
+
+            .prd-list-filter{
+                width: 300px;
+                padding: 15px 30px;
+                .prd-list-filter-title {
+                    display: none;
+                }
+                .filter-item{
+                    padding: 18px 0;
+                    border-bottom: 1px solid $grey-light;
+                    .filter-name{
+                        font-size: 14px;
+                        color: $blue;
+                        width: 100%;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: space-between;
+                        i{  
+                            display: none;
+                            font-size: 13px;
+                        }
+                    }
+                    &.opened{
+                        & + ul{
+                            margin-top: 18px;
+                        }
+                    }
+                    ul{
+                        width: 100%;
+                        visibility: hidden;
+                        opacity: 0;
+                        height: 0px;
+                        overflow: hidden;
+                        li{
+                            a{
+                                line-height: 30px;
+                                font-size: 14px;
+                                color: $black;
+                                display: flex;
+                                align-items: center;
+                                &.chk{
+                                    &:before{
+                                        content:"";
+                                        display: inline-block;
+                                        width: 15px;
+                                        height: 15px;
+                                        margin-right: 15px;
+                                        border-radius: 3px;
+                                        border: 1px solid #99b9cc;
+                                    }
+                                }
+                            }
+                            &.active{
+                                .chk{
+                                    &:before{
+                                        border: 1px solid $blue;
+                                        background: $blue;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.opened{
+                        ul{
+                            visibility: visible;
+                            opacity: 1;
+                            height: auto;
+                            overflow: auto;
+                            margin-top: 15px;
+
+                        }
+                    }
+                }
+            }
+
+        }
+        .footer{
+            display: none;
+        }
+    }
+    
+    .prd-list-holder{
+        flex: 1;
+        .prd-list-ranking{
+            display: block;
+            height: 60px;
+            border: 1px solid $grey-light;
+            .list-grid{
+                display: inline-block;
+                ul{
+                    li{
+                        display: inline-block;
+                        padding: 19px 36px;
+                        border-right: 1px solid $grey-light;
+                        cursor: pointer;
+                        a{
+                            font-size: 16px;
+                            color: #b4bac0;
+                        }
+                        &.selected{
+                            a{
+                                color: $blue;
+                            }
+                        }
+                    }
+                }
+            }
+            .list-ranking{
+                float: right;
+                width:237px; 
+                height: 100%;
+                position: relative;
+                > span{
+                    @include GothamBook;
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    border-left: 1px solid $grey-light;
+                    padding: 0 30px;
+                    font-size: 14px;
+                    color: $grey-dark;
+                    margin: 0;
+                    cursor: pointer;
+                
+                }
+                i{
+                    position: absolute;
+                    top: 50%;
+                    right: 30px;
+                    transform: translateY(-50%);
+                    font-size: 9px;
+                    color: $blue;
+                }
+                ul{
+                    width: calc( 100% + 1px );
+                    position: absolute;
+                    z-index: -1;
+                    background: $body;
+                    border: 1px solid $grey-light;
+                    transition: all 0.2s cubic-bezier(0.8, 0, 0.5, 1);
+                    box-shadow: 0px 1px 1px $body;
+
+                    visibility: hidden;
+                    opacity: 0;
+                    height: 0;
+                    overflow: hidden;
+                    li{
+                        padding: 0 30px;
+                        a{  
+                            display: flex;
+                            align-items: center;
+                            height: 50px;
+                            font-size: 14px;
+                            @include GothamBook;
+                            color: $black;
+                            border-bottom: 1px solid $grey-light;
+                        }
+                        &:last-child{
+                            a{
+                                border-bottom: 0px solid $grey-light;
+                            }
+                        }
+                    }
+                }
+                &.opened{
+                    > span{
+                        color: $blue;
+                        background: $white;
+                    }
+                    ul{
+                        visibility: visible;
+                        opacity: 1;
+                        height: auto;
+                        overflow: auto;
+                        top: 100%;
+                        z-index: 1;
+                        background: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.pagination{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    ul{
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        li{
+            a{
+                font-size: 18px;
+                color: $blue;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            &.selected{
+                a{
+                    background: $blue;
+                    color: $white;
+                }
+            }
+        }
+    }
+    .btn-group{
+        flex: 1;
+        text-align: right;
+        .btn-all-data{
+            font-size: 16px;
+            color: $blue;
+            text-decoration: underline;
+            text-decoration-skip: ink;
+        }
+    }
+    .pag-count{
+        display: none;
+    }
+}
+
+
+
+@media screen and (min-width:961px){
+    .prd-list-wrp{
+        display: flex;
+        flex-wrap: wrap;
+        width: calc( 100% - 100px);
+        margin-top: -1px;
+        &.grid-two{
+            ul.item{
+                width: calc(50% - 20px);
+                background: $white;
+                margin-right: 20px;
+                margin-bottom: 20px;
+                padding: 20px;
+                border: solid 1px $grey-light;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                justify-content: flex-start;
+                position: relative;
+                &:nth-child(even){
+                    margin-right: 0;
+                }
+                li{
+                    &.ico{
+                        position: absolute;
+                        top: 10px;
+                        left: -5px;
+                    }
+                    &.prd-img{
+                        width:100%;
+                        height: 220px;
+                        border-bottom: 1px solid $grey-light;
+                        display: flex;
+                        margin-bottom:13px;
+                        .big-image{
+                            width: 70%;
+                            height: 100%;
+                            text-align: center;
+                            float: left;
+                            img{
+                                height: 100%;
+                            }
+                        }
+                        .ex-image{
+                            width: 30%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-around;
+                            height: calc(100% - 20px);
+                            float: left;
+                            > div{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                img{
+                                    max-height: 100%;
+                                }
+                            }
+
+                        }
+                    }
+                    &.prd-code{
+                        font-size: 12px;
+                        line-height: 1.67;
+                        color: $blue-dark;
+                        width: 100%;
+                        margin-bottom: 7px;
+                    }
+                    &.prd-color{
+                        font-size: 12px;
+                        color: $blue-dark;
+                        position: absolute;
+                        top: 205px;
+                        right: 20px;
+                        white-space: nowrap;
+                    }
+                    &.prd-info{
+                        width: 70%;
+                        .prd-code{
+                            display: none;
+                        }
+                        .title{
+                            display: block;
+                            font-size: 14px;
+                            color: $black;
+                            margin-bottom:5px;
+                        }
+                        .desc{
+                            display: block;
+                            font-size: 12px;
+                            line-height: 1.67;
+                            color: $grey-dark;
+                        }
+                    }
+                    &.prd-piece-wrp{
+                        width: 30%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        height: 120px;
+                        margin-bottom: 15px;
+                        .prd-price{
+                            display: inline-block;
+                            width: 45%;
+                            .name{
+                                display: block;
+                                @include GothamBook;
+                                font-size: 12px;
+                                color: $black;
+                            }
+                            .price{
+                                font-size: 14px;
+                                color: $black;
+                            }
+                        }
+                    }
+                    &.prd-parcel{
+                        width: 70%; 
+                        float: left;
+                        display: flex;
+                        align-items: center;
+                        > div{
+                            font-size: 12px;
+                            color: $black;
+                            i{
+                                font-size: 20px;
+                                margin-right: 10px;
+                            }
+                        }
+                        .prd-clock{
+                            flex: 1;
+                            i{
+                                color: $blue-lighteen;
+                            }
+                        }
+                        .prd-cart-piece{
+                            flex: 2;
+                            i{
+                                color: $green;
+                            }
+                        }
+                    }
+                    &.prd-btn{
+                        width: 30%;
+                        a{
+                            font-size: 14px;
+                            padding: 12px 28px;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+        }
+        &.grid-four{
+            ul.item{
+                width: calc(25% - 20px);
+                background: $white;
+                margin-right: 20px;
+                margin-bottom: 20px;
+                padding: 20px;
+                border: solid 1px $grey-light;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                justify-content: flex-start;
+                position: relative;
+                &:nth-child(4n){
+                    margin-right: 0;
+                }
+                li{
+                    &.ico{
+                        position: absolute;
+                        top: 10px;
+                        left: -5px;
+                    }
+                    &.prd-img{
+                        width:100%;
+                        height: 150px;
+                        border-bottom: 1px solid $grey-light;
+                        display: flex;
+                        margin-bottom:13px;
+                        .big-image{
+                            width: 100%;
+                            height: 100%;
+                            text-align: center;
+                            img{
+                                height: 100%;
+                            }
+                        }
+                        .ex-image{
+                            display: none;
+                        }
+                    }
+                    &.prd-code{
+                        width:50%;
+                        font-size: 12px;
+                        line-height: 1.67;
+                        color: $blue-dark;
+                        margin-bottom: 10px;
+                    }
+                    &.prd-color{
+                        width: 50%;
+                        text-align: right;
+                        font-size: 12px;
+                        color: $blue-dark;
+                    }
+                    &.prd-info{
+                        width: 100%;
+                        margin-bottom: 25px;
+                        .prd-code{
+                            display: none;
+                        }
+                        .title{
+                            display: block;
+                            font-size: 14px;
+                            color: $black;
+                        }
+                        .desc{
+                            display: none;
+                        }
+                    }
+                    &.prd-piece-wrp{
+                        width: 100%;
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex-direction: row;
+                        .prd-price{
+                            display: inline-block;
+                            width: 45%;
+                            .name{
+                                display: block;
+                                @include GothamBook;
+                                font-size: 12px;
+                                color: $black;
+                            }
+                            .price{
+                                font-size: 14px;
+                                color: $black;
+                            }
+                        }
+                    }
+                    &.prd-parcel,
+                    &.prd-btn{
+                        display: none;
+                    }
+                }
+            }
+        }
+        &.grid-list{
+            margin-top: 0;
+            margin-bottom: 20px;
+            ul.item{
+                width: 100%;
+                background: $white;
+                padding: 20px;
+                border: solid 1px $grey-light;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: flex-start;
+                position: relative;
+                margin-top: -1px;
+                li{
+                    &.ico{
+                        position: absolute;
+                        top: 10px;
+                        left: -5px;
+                    }
+                    &.prd-img{
+                        flex:1;
+                        order: 1;
+                        height: 90px;
+                        display: flex;
+                        .big-image{
+                            width: 100%;
+                            height: 100%;
+                            text-align: center;
+                            img{
+                                height: 100%;
+                            }
+                        }
+                        .ex-image{
+                            display: none;
+                        }
+                    }
+                    &.prd-code{
+                        display: none;
+                    }
+                    &.prd-color{
+                        flex: 1;
+                        order: 3;
+                        font-size: 12px;
+                        color: $black ;
+                    }
+                    &.prd-info{
+                        flex: 2;
+                        order: 2;
+                        .prd-code{
+                            display: block;
+                            font-size: 12px;
+                            line-height: 1.67;
+                            color: $blue-dark;
+                            margin-bottom: 5px;
+                        }
+                        .title{
+                            display: block;
+                            font-size: 14px;
+                            color: $black;
+                        }
+                        .desc{
+                            display: none;
+                        }
+                    }
+                    &.prd-piece-wrp{
+                        flex: 2;
+                        order: 5;
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex-direction: row;
+                        .prd-price{
+                            display: inline-block;
+                            width: 50%;
+                            .name{
+                                display: block;
+                                font-size: 12px;
+                                color: $black;
+                            }
+                            .price{
+                                font-size: 14px;
+                                color: $black;
+                            }
+                        }
+                    }
+                    &.prd-parcel{
+                        flex: 2;
+                        order: 4;
+                        display: flex;
+                        align-items: center;
+                        > div{
+                            font-size: 12px;
+                            color: $black;
+                            i{
+                                font-size: 20px;
+                                margin-right: 10px;
+                            }
+                        }
+                        .prd-clock{
+                            flex: 1;
+                            i{
+                                color: $blue-lighteen;
+                            }
+                        }
+                        .prd-cart-piece{
+                            flex: 1;
+                            i{
+                                color: $green;
+                            }
+                        }
+                    }
+                    &.prd-btn{
+                        flex: 1;
+                        order: 6;
+                        a{
+                            font-size: 14px;
+                            padding: 12px 28px;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:960px){
+    .prd-list-ranking, .page-banner-full{ display: none !important; }
+
+    
+    .mobile-filter-wrp{
+        width: 100%;
+        height: 60px;
+        background: $blue;
+        display: flex;
+        > div{
+            border-right: 1px solid #016099;
+            &:last-child{
+                border:0;
+            }
+        }
+        .prd-list-filter-title , .pag-count, .list-ranking{
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .prd-list-filter-title {
+            a{
+                color: $white;
+                font-size: 14px;
+                text-transform: uppercase;
+            }
+        }
+        .pag-count{
+            @include GothamBook;
+            font-size: 14px;
+            line-height: 2.14;
+            color: $white;
+            .count{
+                margin-right: 5px;
+            }
+            .text{
+                text-transform: lowercase;
+            }
+        }
+        .list-ranking{
+            color: $white;
+            font-size: 14px;
+            text-transform: uppercase;
+            position: relative;
+            > i{
+                display: none;
+            }
+            ul{
+                visibility: hidden;
+                opacity: 0;
+                height: 0;
+                overflow: hidden;
+                width: 0;
+
+                position: absolute;
+                top: calc( 100% - 1px );
+                left: auto;
+                right: 0;
+                z-index: 1;
+                background: $white;
+                border: 1px solid #dadfe3;
+                box-shadow: 0px 0 3px $grey-lighter;
+                li{
+                    padding: 0 20px;
+                    a{  
+                        display: block;
+                        padding: 15px 0;
+                        white-space: nowrap;
+                        border-bottom: 1px solid #dadfe3; 
+                        font-size: 14px;
+                        @include GothamBook;
+                        font-weight: 300;
+                        color: #000;
+                        text-transform: initial;
+                    }
+                    &:last-child{
+                        a{
+                            border: 0;
+                        }
+                    }
+                }
+
+            }
+            &.opened{
+                ul{
+                    visibility: visible;
+                    opacity: 1;
+                    height: auto;
+                    overflow: auto;
+                    width: auto;
+                }
+            }
+        }
+    }
+
+    .prd-list{
+        flex-wrap: wrap;
+        .prd-filter-wrp{
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 10;
+            background: $white;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            height: 0;
+            overflow: hidden;
+            visibility: hidden;
+            opacity: 0;
+            transform: scale(0.5);
+            transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+            &.opened{
+                height: auto;
+                overflow: auto;
+                visibility: visible;
+                opacity: 1;
+                transform: scale(1);
+            }
+            .header{
+                display: block;
+                .title{
+                    width: 100%;
+                    height: 60px;
+                    background: $blue;
+                    padding: 0 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    span{
+                        font-size: 16px;
+                        color: $white;
+                    }
+                    .btn-close{
+                        font-size: 16px;
+                        color: $white;
+                    }
+                }
+                .btn-clear{
+                    width: 100%;
+                    height: 60px;
+                    background: #f4f7fa;
+                    font-size: 14px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            .content{
+                flex: 1;
+                overflow-y: auto;
+                .prd-list-filter{
+                    width: 100%;
+                    padding: 15px 20px;
+                    .filter-item{
+                        .filter-name{
+                            font-size: 16px;
+                            i{
+                                display: inline-block;
+                            }
+                        }
+                        ul{
+                            li{
+                                padding: 20px 0;
+                                a{
+                                    @include GothamBook;
+                                    line-height: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .footer{
+                display: block;
+                .btn-apply{
+                    width: 100%;
+                    height: 60px;
+                    background: $blue;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    font-size: 16px;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .prd-list-wrp{
+        display: flex;
+        flex-wrap: wrap;
+        width: calc( 100%);
+        margin-top: -1px;
+        &.grid-two, &.grid-four, &.grid-list{
+            ul.item{
+                width: 100%;
+                background: $white;
+                margin: 0;
+                padding: 20px;
+                border-width: 0 0 1px 0;
+                border-style: solid;
+                border-color: $grey-light;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: initial;
+                justify-content: flex-start;
+                position: relative;
+                &:last-child{
+                    border: 0;
+                }
+                li{
+                    &.prd-img, &.prd-parcel{ width: 35%; }
+                    &.prd-info, &.prd-piece-wrp{ width: 43%; }
+                    &.prd-color, &.prd-btn{ width: 22%; }
+
+                    &.ico, &.prd-code{
+                        display: none;
+                    }
+                    &.prd-img{
+                        order: 1;
+                        height: 60px;
+                        border-bottom: 0px solid $grey-light;
+                        display: flex;
+                        justify-content: center;
+                        margin-bottom: 0;
+                        .big-image{
+                            text-align: center;
+                            img{
+                                height: 100%;
+                            }
+                        }
+                        .ex-image{
+                            display: none;
+                        }
+                    }
+                    &.prd-color{
+                        order: 3;
+                        color: $black;
+                        text-align: right;
+                        @include GothamBook;
+                        font-size: 12px;
+                    }
+                    &.prd-info{
+                        order: 2;
+                        margin-bottom: 20px;
+                        .prd-code{
+                            display: block;
+                            margin-bottom: 0;
+                        }
+                        .desc{
+                            display: none;
+                        }
+                    }
+                    &.prd-piece-wrp{
+                        order: 5;
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex-direction: row;
+                        align-items: flex-end;
+                        
+                        .prd-price{
+                            display: inline-block;
+                            width: 45%;
+                            .name{
+                                display: block;
+                                @include GothamBook;
+                                font-size: 12px;
+                                color: $black;
+                            }
+                            .price{
+                                font-size: 14px;
+                                color: $black;
+                            }
+                        }
+                    }
+                    &.prd-parcel{
+                        order:4;
+                        display: flex;
+                        align-items: flex-end;
+                        > div{
+                            font-size: 12px;
+                            color: $black;
+                            display: flex;
+                            align-items: center;
+                            padding-bottom: 2px;
+                            i{
+                                font-size: 18px;
+                                margin-right: 2px;
+                            }
+                        }
+                        .prd-clock{
+                            flex: 1;
+                            i{
+                                color: $blue-lighteen;
+                            }
+                        }
+                        .prd-cart-piece{
+                            flex: 1;
+                            i{
+                                color: $green;
+                            }
+                        }
+                    }
+                    &.prd-btn{
+                        order: 6;
+                        display: flex;
+                        align-items: flex-end;
+                        .add-basket{
+                            width: 100%;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .pagination{
+        justify-content: center;
+        background: $white;
+        padding: 30px;
+        ul{
+            flex: initial;
+            width: 100%;
+            margin: 0px 0 30px;
+            justify-content: space-around;
+        }
+        .btn-group{
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.uk-button-primary{
+    background-color: $green;
+    color: $white;
+    padding: 13px 0;
+    border-radius: 5px;
+}
+
+.uk-button-primary:hover, .uk-button-primary:focus{
+    background-color: tint( $green, 10% );
+    color: $white;
+}
+
+.uk-button-secondary{
+    background-color: $blue;
+    color: $white;
+    padding: 13px 0;
+    border-radius: 5px;
+}
+
+.uk-button-secondary:hover, .uk-button-secondary:focus{
+    background-color: tint( $blue, 10% );
+    color: $white;
+}
+
+.btn-change{
+    min-height: 25px;
+    line-height: 25px;
+    padding: 0 13px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.btn-detail{
+    background: $white;
+    display: inline-block;
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 5px;
+}

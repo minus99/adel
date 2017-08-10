@@ -1,0 +1,43 @@
+doctype html
+
+html
+  
+  include template/head.pug
+  
+  body
+    
+    include template/header.pug
+    .reseller-application-wrapper
+    
+        .uk-width-medium-4-6.uk-container-center
+            .page-title Bayi Başvurusu
+            .res-ap-wrp
+                .account-form-wrapper.m-t-0
+                    form.uk-form
+                        fieldset
+                            .uk-form-row.uk-flex.uk-flex-middle
+                                .uk-width-1-3 Şirket Ünvanı:
+                                input.uk-width-2-3(type="text" name="companyTitle" id="companyTitle" placeholder="Şirket Ünvanı")
+                            .uk-form-row.uk-flex.uk-flex-middle
+                                .uk-width-1-3 Ad Soyad:
+                                input.uk-width-2-3(type="text" name="name" id="name" placeholder="Ad Soyad")
+                            .uk-form-row.uk-flex.uk-flex-middle
+                                .uk-width-1-3 Telefon:
+                                input.uk-width-2-3(type="text" name="phone" id="phone" placeholder="Telefon")
+                            .uk-form-row.uk-flex.uk-flex-middle
+                                .uk-width-1-3 E-Mail:
+                                input.uk-width-2-3(type="text" name="email" id="email" placeholder="E-Mail")
+                            .uk-form-row.uk-flex.uk-flex-middle
+                                .uk-width-1-3 Şifre:
+                                input.uk-width-2-3(type="text" name="pass" id="pass" placeholder="Şifre")
+                            .uk-form-row.uk-flex
+                                .uk-width-1-3 Adresi:
+                                textarea.uk-width-2-3(name="address" id="address" placeholder="Adres" row=10)
+                            .uk-form-row.uk-flex
+                                .uk-width-1-3
+                                button.uk-button.uk-button-primary.uk-width-2-3(type="submit") KAYDET
+
+    include template/footer.pug
+
+    include template/script.pug
+            

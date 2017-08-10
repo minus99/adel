@@ -1,0 +1,29 @@
+doctype html
+
+html
+  
+  include template/head.pug
+  
+  body.ems-login
+    //Üye girişi yapılmışsa body'e ems-login classı atılması gerekiyor.
+    
+    include template/header.pug
+
+    .uk-container.uk-container-center
+        .uk-flex.uk-flex-middle.uk-flex-center.m-t-40.m-b-40
+
+            a.uk-button.uk-button-success.m-r-10(href='#login' data-uk-modal="{center:true}") Login
+            include modal/login.pug 
+
+            a.uk-button.uk-button-success.m-r-10(href='#dealer' data-uk-modal="{center:true}") Bayi Seçimi
+            include modal/bayi-seciniz.pug 
+
+            a.uk-button.uk-button-success.m-r-10(href='#adressSelection' data-uk-modal="{center:true}") Adres Seçimi
+            include modal/adres.pug
+
+            a.uk-button.uk-button-success(href='#dealerChange' data-uk-modal="{center:true}") Bayi Değişikliği
+            include modal/bayi-degisikligi.pug 
+    
+    include template/footer.pug
+
+    include template/script.pug

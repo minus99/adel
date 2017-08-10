@@ -1,0 +1,65 @@
+doctype html
+
+html
+  
+  include template/head.pug
+  
+  body.ems-login.page-account
+    //Üye girişi yapılmışsa body'e ems-login classı atılması gerekiyor.
+    
+    include template/header.pug
+
+    .uk-container.uk-container-center
+        .page-account-wrapper
+            include template/account-menu.pug
+
+            .account-content
+                .page-title Siparişlerim
+                
+                ul.order-list
+                    li 
+                        .order-dealer
+                            .title Bayi
+                            .name BATI KİTAP KIRTASiYE BİLG. SAN. LTD. ŞTİ.
+                        .order-date
+                            .title Tarih
+                            .date 12.06.2017
+                        .order-price
+                            .title Sipariş Toplamı
+                            .price
+                                i.lira ₺
+                                span 0,85
+                        .order-button
+                            a.uk-button-primary.btn-again(href="javascript:void(0)") TEKRARLA
+                    li 
+                        .order-dealer
+                            .title Bayi
+                            .name BATI KİTAP KIRTASiYE BİLG. SAN. LTD. ŞTİ.
+                        .order-date
+                            .title Tarih
+                            .date 12.06.2017
+                        .order-price
+                            .title Sipariş Toplamı
+                            .price
+                                i.lira ₺
+                                span 0,85
+                        .order-button
+                            a.uk-button-primary.btn-again(href="javascript:void(0)") TEKRARLA
+                    li 
+                        .order-dealer
+                            .title Bayi
+                            .name BATI KİTAP KIRTASiYE BİLG. SAN. LTD. ŞTİ.
+                        .order-date
+                            .title Tarih
+                            .date 12.06.2017
+                        .order-price
+                            .title Sipariş Toplamı
+                            .price
+                                i.lira ₺
+                                span 0,85
+                        .order-button
+                            a.uk-button-primary.btn-again(href="javascript:void(0)") TEKRARLA
+
+    include template/footer.pug
+
+    include template/script.pug

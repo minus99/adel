@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- META-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="Adel">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>Adel</title>
+    <!-- CSS-->
+    <link rel="stylesheet" href="css/fontello.css" media="screen" title-no="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/uikit.css" media="screen" title-no="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/plugins.css" media="screen" title-no="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/style.css" media="screen" title-no="no title" charset="utf-8">
+    <!-- JS-->
+    <script src="js/jquery.min.js" charset="utf-8"></script>
+    <script src="js/uikit.min.js" charset="utf-8"></script>
+  </head>
+  <body class="ems-login page-order">
+    <!-- HEADER START-->
+    <header class="adel-header">
+      <div class="header-top">
+        <div class="uk-container uk-container-center">
+          <div class="uk-flex uk-flex-space-between uk-flex-wrap-middle">
+            <div class="left-content">
+              <div class="dealers"><i class="icon-account"></i><span class="name">Batı Kitap Kırtasiye Bilg.San.Ltd.Sti</span><a class="uk-button uk-button-primary btn-change">Değiştir</a></div>
+            </div>
+            <div class="right-content">
+              <div class="account"><a class="btn-account">Murat Özdemir<i class="icon-account"></i></a><a class="btn-signin">Üyelik<i class="icon-account"></i></a></div><a class="btn-basket">Sepetim<i class="icon-cart"><i class="basket-count">3</i></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="adel-nav-bar uk-navbar uk-navbar-attached">
+        <div class="uk-container uk-container-center"><a class="uk-navbar-brand logo"><img class="uk-margin uk-margin-remove" src="images/menu-logo.png"></a><a class="nav-menu-mobile"><i class="icon-grid-list"></i></a>
+          <div class="menu-wrapper">
+            <div class="menu-header"><span>Kategori</span><a class="nav-menu-mobile-close"><i class="icon-close"></i></a></div>
+            <ul class="uk-navbar-nav menu">
+              <li><a href="javascript:void(0)">Ürünler</a>
+                <div class="subMenu-wrapper">
+                  <div class="subMenu">
+                    <ul> 
+                      <li> <a href="javascript:void(0)">Tüm Ürün Grupları</a></li>
+                      <li><a href="javascript:void(0)">Boyama Grubu</a></li>
+                      <li><a href="javascript:void(0)">Çanta Grubu</a></li>
+                      <li><a href="javascript:void(0)">Dosyalama Grubu</a></li>
+                      <li><a href="javascript:void(0)">Hobi/Eğlence Grubu</a></li>
+                      <li><a href="javascript:void(0)">İşaterleme Grubu</a></li>
+                      <li><a href="javascript:void(0)">Kağıt Grubu</a></li>
+                      <li><a href="javascript:void(0)">Ofis Grubu</a></li>
+                      <li><a href="javascript:void(0)">Oyuncak</a>
+                        <ul> 
+                          <li><a href="javascript:void(0)">Tüm Markalar</a></li>
+                          <li> <a href="javascript:void(0)">Adel</a>
+                            <ul>
+                              <li><a href="javascript:void(0)">Tüm Ürünler</a></li>
+                              <li><a href="javascript:void(0)">Defter</a></li>
+                              <li><a href="javascript:void(0)">Fon Kartonu</a></li>
+                              <li><a href="javascript:void(0)">Grapon</a></li>
+                              <li><a href="javascript:void(0)">Karışık Set</a></li>
+                            </ul>
+                          </li>
+                          <li><a href="javascript:void(0)">Adeland</a></li>
+                          <li><a href="javascript:void(0)">Faber-Castell</a></li>
+                          <li><a href="javascript:void(0)">OEM</a></li>
+                          <li><a href="javascript:void(0)">Graf Von Faber-Castell</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="javascript:void(0)">Sanat Grubu</a></li>
+                      <li><a href="javascript:void(0)">Teknik Grubu</a></li>
+                      <li><a href="javascript:void(0)">Yazım Grubu</a></li>
+                      <li><a href="javascript:void(0)">Markalar</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li><a href="javascript:void(0)">Yeni Ürünler</a></li>
+              <li><a href="javascript:void(0)">Blister</a></li>
+              <li><a href="javascript:void(0)">Standlar</a></li>
+              <li><a href="javascript:void(0)">İskontolu Ürünler</a></li>
+            </ul>
+          </div>
+          <div class="uk-navbar-content uk-navbar-flip p-0 search-bar-wrapper">
+            <form class="uk-form uk-margin-remove uk-display-inline-block">
+              <div class="page-search">
+                <input type="text" name="search" id="search" placeholder="Ürün kodu ile ara">
+                <button class="submit" type="button" name="submit"><i class="icon-search"></i></button>
+              </div>
+              <div class="ems-search-suggestion">
+                <div class="ems-search-suggestion">
+                  <div class="suggestion-wrapper"></div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="order-page">
+      <div class="order-header"><a href="javascript:void(0)"><img src="images/logo-light.png"></a></div>
+      <div class="order-content">
+        <div class="order-left"> 
+          <div class="page-title"><span>Sipariş Özeti</span></div>
+          <div class="order-cat">
+            <div class="order-group dropdown" data-uk-drp="{'fnd':'.long'}"><span>GRUPLAR</span>
+              <ul data-uk-switcher="{connect:'#cart-order-group'}">
+                <li class="all-group" onclick="events.clicked.allTabGroup(this);"> <a href="javascript:void(0)"> <span class="short"> </span><span class="long">TÜM ÜRÜN GRUPLARI</span></a></li>
+                <li class="selected uk-active" aria-expanded="true"><a href="javascript:void(0)"> <span class="short">B</span><span class="long">BOYAMA GRUBU</span></a></li>
+                <li> <a href="javascript:void(0)"> <span class="short">Ç</span><span class="long">ÇANTA GRUBU</span></a></li>
+                <li> <a href="javascript:void(0)"> <span class="short">D</span><span class="long">DOSYALAMA GRUBU</span></a></li>
+                <li><a href="javascript:void(0)"> <span class="short">H</span><span class="long">HOBİ/ EĞLENCE GRUBU</span></a></li>
+                <li> <a href="javascript:void(0)"> <span class="short">İ</span><span class="long">İŞARETLEME GRUBU</span></a></li>
+                <li> <a href="javascript:void(0)"><span class="short">K</span><span class="long">KAĞIT GRUBU</span></a></li>
+                <li> <a href="javascript:void(0)"><span class="short">O</span><span class="long">OFİS GRUBU</span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="order-box"> 
+            <div class="order-table">
+              <div class="order-row head">
+                <div class="order-product"><span>ÜRÜN</span></div>
+                <div class="order-piece-price"><span>ADET FİYATI</span></div>
+                <div class="order-piece"><span>ADET</span></div>
+                <div class="order-old"><span>ÖNCEKİ</span></div>
+                <div class="order-price"><span>FİYAT</span></div>
+              </div>
+              <ul class="uk-switcher cart-order-items" id="cart-order-group">
+                <li class="all-order"> </li>
+                <li>
+                  <div class="order-row title"><span>BOYAMA GRUBU</span></div>
+                  <div class="order-row" id="order-row-001">
+                    <div class="order-product">
+                      <div class="img"><img src="images/05.jpg"></div>
+                      <div class="title-gr"><span class="code">EM346387</span><span class="title">Eclipse Mekanik Kursun Kalem</span><span class="mob-price"><span class="piece-price"><i class="lira">₺</i>0,85</span><span class="price"><i class="lira">₺</i>78,99</span></span></div><a class="sub-btn" data-uk-toggle="{target:'#order-row-001', cls:'opened'}"><i></i></a>
+                    </div>
+                    <div class="order-piece-price"><span class="price"> <i class="lira">₺</i>0,85</span></div>
+                    <div class="order-piece">
+                      <div class="inp inp-num">
+                        <input class="inp-piece" type="text" min="0" value="12">
+                      </div>
+                      <div class="type"><span class="name">Gross x</span><span class="price"><i class="lira">₺</i>0,85</span></div>
+                    </div>
+                    <div class="order-old"><span class="piece-old">16</span></div>
+                    <div class="order-price"><span class="price"> <i class="lira">₺</i>78,99</span></div>
+                  </div>
+                  <div class="order-row" id="order-row-002">
+                    <div class="order-product">
+                      <div class="img"><img src="images/05.jpg"></div>
+                      <div class="title-gr"><span class="code">EM346387</span><span class="title">Eclipse Mekanik Kursun Kalem</span><span class="mob-price"><span class="piece-price"><i class="lira">₺</i>0,85</span><span class="price"><i class="lira">₺</i>78,99</span></span></div><a class="sub-btn" data-uk-toggle="{target:'#order-row-002', cls:'opened'}"><i></i></a>
+                    </div>
+                    <div class="order-piece-price"><span class="price"> <i class="lira">₺</i>0,85</span></div>
+                    <div class="order-piece">
+                      <div class="inp inp-num">
+                        <input class="inp-piece" type="text" min="0" value="12">
+                      </div>
+                      <div class="type"><span class="name">Gross x</span><span class="price"><i class="lira">₺</i>0,85</span></div>
+                    </div>
+                    <div class="order-old"><span class="piece-old">16</span></div>
+                    <div class="order-price"><span class="price"> <i class="lira">₺</i>78,99</span></div>
+                  </div>
+                  <div class="order-row" id="order-row-003">
+                    <div class="order-product">
+                      <div class="img"><img src="images/05.jpg"></div>
+                      <div class="title-gr"><span class="code">EM346387</span><span class="title">Eclipse Mekanik Kursun Kalem</span><span class="mob-price"><span class="piece-price"><i class="lira">₺</i>0,85</span><span class="price"><i class="lira">₺</i>78,99</span></span></div><a class="sub-btn" data-uk-toggle="{target:'#order-row-003', cls:'opened'}"><i></i></a>
+                    </div>
+                    <div class="order-piece-price"><span class="price"> <i class="lira">₺</i>0,85</span></div>
+                    <div class="order-piece">
+                      <div class="inp inp-num">
+                        <input class="inp-piece" type="text" min="0" value="12">
+                      </div>
+                      <div class="type"><span class="name">Gross x</span><span class="price"><i class="lira">₺</i>0,85</span></div>
+                    </div>
+                    <div class="order-old"><span class="piece-old">16</span></div>
+                    <div class="order-price"><span class="price"> <i class="lira">₺</i>78,99</span></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="order-row title"><span>ÇANTA GRUBU</span></div>
+                  <div class="order-row" id="order-row-001">
+                    <div class="order-product">
+                      <div class="img"><img src="images/05.jpg"></div>
+                      <div class="title-gr"><span class="code">EM346387</span><span class="title">Eclipse Mekanik Kursun Kalem</span><span class="mob-price"><span class="piece-price"><i class="lira">₺</i>0,85</span><span class="price"><i class="lira">₺</i>78,99</span></span></div><a class="sub-btn" data-uk-toggle="{target:'#order-row-001', cls:'opened'}"><i></i></a>
+                    </div>
+                    <div class="order-piece-price"><span class="price"> <i class="lira">₺</i>0,85</span></div>
+                    <div class="order-piece">
+                      <div class="inp inp-num">
+                        <input class="inp-piece" type="text" min="0" value="12">
+                      </div>
+                      <div class="type"><span class="name">Gross x</span><span class="price"><i class="lira">₺</i>0,85</span></div>
+                    </div>
+                    <div class="order-old"><span class="piece-old">16</span></div>
+                    <div class="order-price"><span class="price"> <i class="lira">₺</i>78,99</span></div>
+                  </div>
+                  <div class="order-row" id="order-row-002">
+                    <div class="order-product">
+                      <div class="img"><img src="images/05.jpg"></div>
+                      <div class="title-gr"><span class="code">EM346387</span><span class="title">Eclipse Mekanik Kursun Kalem</span><span class="mob-price"><span class="piece-price"><i class="lira">₺</i>0,85</span><span class="price"><i class="lira">₺</i>78,99</span></span></div><a class="sub-btn" data-uk-toggle="{target:'#order-row-002', cls:'opened'}"><i></i></a>
+                    </div>
+                    <div class="order-piece-price"><span class="price"> <i class="lira">₺</i>0,85</span></div>
+                    <div class="order-piece">
+                      <div class="inp inp-num">
+                        <input class="inp-piece" type="text" min="0" value="12">
+                      </div>
+                      <div class="type"><span class="name">Gross x</span><span class="price"><i class="lira">₺</i>0,85</span></div>
+                    </div>
+                    <div class="order-old"><span class="piece-old">16</span></div>
+                    <div class="order-price"><span class="price"> <i class="lira">₺</i>78,99</span></div>
+                  </div>
+                  <div class="order-row" id="order-row-003">
+                    <div class="order-product">
+                      <div class="img"><img src="images/05.jpg"></div>
+                      <div class="title-gr"><span class="code">EM346387</span><span class="title">Eclipse Mekanik Kursun Kalem</span><span class="mob-price"><span class="piece-price"><i class="lira">₺</i>0,85</span><span class="price"><i class="lira">₺</i>78,99</span></span></div><a class="sub-btn" data-uk-toggle="{target:'#order-row-003', cls:'opened'}"><i></i></a>
+                    </div>
+                    <div class="order-piece-price"><span class="price"> <i class="lira">₺</i>0,85</span></div>
+                    <div class="order-piece">
+                      <div class="inp inp-num">
+                        <input class="inp-piece" type="text" min="0" value="12">
+                      </div>
+                      <div class="type"><span class="name">Gross x</span><span class="price"><i class="lira">₺</i>0,85</span></div>
+                    </div>
+                    <div class="order-old"><span class="piece-old">16</span></div>
+                    <div class="order-price"><span class="price"> <i class="lira">₺</i>78,99</span></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="order-row title"><span>DOSYALAMA GRUBU</span></div>
+                  <div class="order-row" id="order-row-001">
+                    <div class="order-product">
+                      <div class="img"><img src="images/05.jpg"></div>
+                      <div class="title-gr"><span class="code">EM346387</span><span class="title">Eclipse Mekanik Kursun Kalem</span><span class="mob-price"><span class="piece-price"><i class="lira">₺</i>0,85</span><span class="price"><i class="lira">₺</i>78,99</span></span></div><a class="sub-btn" data-uk-toggle="{target:'#order-row-001', cls:'opened'}"><i></i></a>
+                    </div>
+                    <div class="order-piece-price"><span class="price"> <i class="lira">₺</i>0,85</span></div>
+                    <div class="order-piece">
+                      <div class="inp inp-num">
+                        <input class="inp-piece" type="text" min="0" value="12">
+                      </div>
+                      <div class="type"><span class="name">Gross x</span><span class="price"><i class="lira">₺</i>0,85</span></div>
+                    </div>
+                    <div class="order-old"><span class="piece-old">16</span></div>
+                    <div class="order-price"><span class="price"> <i class="lira">₺</i>78,99</span></div>
+                  </div>
+                  <div class="order-row" id="order-row-002">
+                    <div class="order-product">
+                      <div class="img"><img src="images/05.jpg"></div>
+                      <div class="title-gr"><span class="code">EM346387</span><span class="title">Eclipse Mekanik Kursun Kalem</span><span class="mob-price"><span class="piece-price"><i class="lira">₺</i>0,85</span><span class="price"><i class="lira">₺</i>78,99</span></span></div><a class="sub-btn" data-uk-toggle="{target:'#order-row-002', cls:'opened'}"><i></i></a>
+                    </div>
+                    <div class="order-piece-price"><span class="price"> <i class="lira">₺</i>0,85</span></div>
+                    <div class="order-piece">
+                      <div class="inp inp-num">
+                        <input class="inp-piece" type="text" min="0" value="12">
+                      </div>
+                      <div class="type"><span class="name">Gross x</span><span class="price"><i class="lira">₺</i>0,85</span></div>
+                    </div>
+                    <div class="order-old"><span class="piece-old">16</span></div>
+                    <div class="order-price"><span class="price"> <i class="lira">₺</i>78,99</span></div>
+                  </div>
+                  <div class="order-row" id="order-row-003">
+                    <div class="order-product">
+                      <div class="img"><img src="images/05.jpg"></div>
+                      <div class="title-gr"><span class="code">EM346387</span><span class="title">Eclipse Mekanik Kursun Kalem</span><span class="mob-price"><span class="piece-price"><i class="lira">₺</i>0,85</span><span class="price"><i class="lira">₺</i>78,99</span></span></div><a class="sub-btn" data-uk-toggle="{target:'#order-row-003', cls:'opened'}"><i></i></a>
+                    </div>
+                    <div class="order-piece-price"><span class="price"> <i class="lira">₺</i>0,85</span></div>
+                    <div class="order-piece">
+                      <div class="inp inp-num">
+                        <input class="inp-piece" type="text" min="0" value="12">
+                      </div>
+                      <div class="type"><span class="name">Gross x</span><span class="price"><i class="lira">₺</i>0,85</span></div>
+                    </div>
+                    <div class="order-old"><span class="piece-old">16</span></div>
+                    <div class="order-price"><span class="price"> <i class="lira">₺</i>78,99</span></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="order-row title"><span>HOBİ/ EĞLENCE GRUBU</span></div>
+                  <div class="order-row" id="order-row-001">
+                    <div class="order-product">
+                      <div class="img"><img src="images/05.jpg"></div>
+                      <div class="title-gr"><span class="code">EM346387</span><span class="title">Eclipse Mekanik Kursun Kalem</span><span class="mob-price"><span class="piece-price"><i class="lira">₺</i>0,85</span><span class="price"><i class="lira">₺</i>78,99</span></span></div><a class="sub-btn" data-uk-toggle="{target:'#order-row-001', cls:'opened'}"><i></i></a>
+                    </div>
+                    <div class="order-piece-price"><span class="price"> <i class="lira">₺</i>0,85</span></div>
+                    <div class="order-piece">
+                      <div class="inp inp-num">
+                        <input class="inp-piece" type="text" min="0" value="12">
+                      </div>
+                      <div class="type"><span class="name">Gross x</span><span class="price"><i class="lira">₺</i>0,85</span></div>
+                    </div>
+                    <div class="order-old"><span class="piece-old">16</span></div>
+                    <div class="order-price"><span class="price"> <i class="lira">₺</i>78,99</span></div>
+                  </div>
+                  <div class="order-row" id="order-row-002">
+                    <div class="order-product">
+                      <div class="img"><img src="images/05.jpg"></div>
+                      <div class="title-gr"><span class="code">EM346387</span><span class="title">Eclipse Mekanik Kursun Kalem</span><span class="mob-price"><span class="piece-price"><i class="lira">₺</i>0,85</span><span class="price"><i class="lira">₺</i>78,99</span></span></div><a class="sub-btn" data-uk-toggle="{target:'#order-row-002', cls:'opened'}"><i></i></a>
+                    </div>
+                    <div class="order-piece-price"><span class="price"> <i class="lira">₺</i>0,85</span></div>
+                    <div class="order-piece">
+                      <div class="inp inp-num">
+                        <input class="inp-piece" type="text" min="0" value="12">
+                      </div>
+                      <div class="type"><span class="name">Gross x</span><span class="price"><i class="lira">₺</i>0,85</span></div>
+                    </div>
+                    <div class="order-old"><span class="piece-old">16</span></div>
+                    <div class="order-price"><span class="price"> <i class="lira">₺</i>78,99</span></div>
+                  </div>
+                  <div class="order-row" id="order-row-003">
+                    <div class="order-product">
+                      <div class="img"><img src="images/05.jpg"></div>
+                      <div class="title-gr"><span class="code">EM346387</span><span class="title">Eclipse Mekanik Kursun Kalem</span><span class="mob-price"><span class="piece-price"><i class="lira">₺</i>0,85</span><span class="price"><i class="lira">₺</i>78,99</span></span></div><a class="sub-btn" data-uk-toggle="{target:'#order-row-003', cls:'opened'}"><i></i></a>
+                    </div>
+                    <div class="order-piece-price"><span class="price"> <i class="lira">₺</i>0,85</span></div>
+                    <div class="order-piece">
+                      <div class="inp inp-num">
+                        <input class="inp-piece" type="text" min="0" value="12">
+                      </div>
+                      <div class="type"><span class="name">Gross x</span><span class="price"><i class="lira">₺</i>0,85</span></div>
+                    </div>
+                    <div class="order-old"><span class="piece-old">16</span></div>
+                    <div class="order-price"><span class="price"> <i class="lira">₺</i>78,99</span></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="order-row title"><span>İŞARETLEME GRUBU</span></div>
+                  <div class="order-row" id="order-row-001">
+                    <div class="order-product">
+                      <div class="img"><img src="images/05.jpg"></div>
+                      <div class="title-gr"><span class="code">EM346387</span><span class="title">Eclipse Mekanik Kursun Kalem</span><span class="mob-price"><span class="piece-price"><i class="lira">₺</i>0,85</span><span class="price"><i class="lira">₺</i>78,99</span></span></div><a class="sub-btn" data-uk-toggle="{target:'#order-row-001', cls:'opened'}"><i></i></a>
+                    </div>
+                    <div class="order-piece-price"><span class="price"> <i class="lira">₺</i>0,85</span></div>
+                    <div class="order-piece">
+                      <div class="inp inp-num">
+                        <input class="inp-piece" type="text" min="0" value="12">
+                      </div>
+                      <div class="type"><span class="name">Gross x</span><span class="price"><i class="lira">₺</i>0,85</span></div>
+                    </div>
+                    <div class="order-old"><span class="piece-old">16</span></div>
+                    <div class="order-price"><span class="price"> <i class="lira">₺</i>78,99</span></div>
+                  </div>
+                  <div class="order-row" id="order-row-002">
+                    <div class="order-product">
+                      <div class="img"><img src="images/05.jpg"></div>
+                      <div class="title-gr"><span class="code">EM346387</span><span class="title">Eclipse Mekanik Kursun Kalem</span><span class="mob-price"><span class="piece-price"><i class="lira">₺</i>0,85</span><span class="price"><i class="lira">₺</i>78,99</span></span></div><a class="sub-btn" data-uk-toggle="{target:'#order-row-002', cls:'opened'}"><i></i></a>
+                    </div>
+                    <div class="order-piece-price"><span class="price"> <i class="lira">₺</i>0,85</span></div>
+                    <div class="order-piece">
+                      <div class="inp inp-num">
+                        <input class="inp-piece" type="text" min="0" value="12">
+                      </div>
+                      <div class="type"><span class="name">Gross x</span><span class="price"><i class="lira">₺</i>0,85</span></div>
+                    </div>
+                    <div class="order-old"><span class="piece-old">16</span></div>
+                    <div class="order-price"><span class="price"> <i class="lira">₺</i>78,99</span></div>
+                  </div>
+                  <div class="order-row" id="order-row-003">
+                    <div class="order-product">
+                      <div class="img"><img src="images/05.jpg"></div>
+                      <div class="title-gr"><span class="code">EM346387</span><span class="title">Eclipse Mekanik Kursun Kalem</span><span class="mob-price"><span class="piece-price"><i class="lira">₺</i>0,85</span><span class="price"><i class="lira">₺</i>78,99</span></span></div><a class="sub-btn" data-uk-toggle="{target:'#order-row-003', cls:'opened'}"><i></i></a>
+                    </div>
+                    <div class="order-piece-price"><span class="price"> <i class="lira">₺</i>0,85</span></div>
+                    <div class="order-piece">
+                      <div class="inp inp-num">
+                        <input class="inp-piece" type="text" min="0" value="12">
+                      </div>
+                      <div class="type"><span class="name">Gross x</span><span class="price"><i class="lira">₺</i>0,85</span></div>
+                    </div>
+                    <div class="order-old"><span class="piece-old">16</span></div>
+                    <div class="order-price"><span class="price"> <i class="lira">₺</i>78,99</span></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="order-row title"><span>KAĞIT GRUBU</span></div>
+                  <div class="order-row" id="order-row-001">
+                    <div class="order-product">
+                      <div class="img"><img src="images/05.jpg"></div>
+                      <div class="title-gr"><span class="code">EM346387</span><span class="title">Eclipse Mekanik Kursun Kalem</span><span class="mob-price"><span class="piece-price"><i class="lira">₺</i>0,85</span><span class="price"><i class="lira">₺</i>78,99</span></span></div><a class="sub-btn" data-uk-toggle="{target:'#order-row-001', cls:'opened'}"><i></i></a>
+                    </div>
+                    <div class="order-piece-price"><span class="price"> <i class="lira">₺</i>0,85</span></div>
+                    <div class="order-piece">
+                      <div class="inp inp-num">
+                        <input class="inp-piece" type="text" min="0" value="12">
+                      </div>
+                      <div class="type"><span class="name">Gross x</span><span class="price"><i class="lira">₺</i>0,85</span></div>
+                    </div>
+                    <div class="order-old"><span class="piece-old">16</span></div>
+                    <div class="order-price"><span class="price"> <i class="lira">₺</i>78,99</span></div>
+                  </div>
+                  <div class="order-row" id="order-row-002">
+                    <div class="order-product">
+                      <div class="img"><img src="images/05.jpg"></div>
+                      <div class="title-gr"><span class="code">EM346387</span><span class="title">Eclipse Mekanik Kursun Kalem</span><span class="mob-price"><span class="piece-price"><i class="lira">₺</i>0,85</span><span class="price"><i class="lira">₺</i>78,99</span></span></div><a class="sub-btn" data-uk-toggle="{target:'#order-row-002', cls:'opened'}"><i></i></a>
+                    </div>
+                    <div class="order-piece-price"><span class="price"> <i class="lira">₺</i>0,85</span></div>
+                    <div class="order-piece">
+                      <div class="inp inp-num">
+                        <input class="inp-piece" type="text" min="0" value="12">
+                      </div>
+                      <div class="type"><span class="name">Gross x</span><span class="price"><i class="lira">₺</i>0,85</span></div>
+                    </div>
+                    <div class="order-old"><span class="piece-old">16</span></div>
+                    <div class="order-price"><span class="price"> <i class="lira">₺</i>78,99</span></div>
+                  </div>
+                  <div class="order-row" id="order-row-003">
+                    <div class="order-product">
+                      <div class="img"><img src="images/05.jpg"></div>
+                      <div class="title-gr"><span class="code">EM346387</span><span class="title">Eclipse Mekanik Kursun Kalem</span><span class="mob-price"><span class="piece-price"><i class="lira">₺</i>0,85</span><span class="price"><i class="lira">₺</i>78,99</span></span></div><a class="sub-btn" data-uk-toggle="{target:'#order-row-003', cls:'opened'}"><i></i></a>
+                    </div>
+                    <div class="order-piece-price"><span class="price"> <i class="lira">₺</i>0,85</span></div>
+                    <div class="order-piece">
+                      <div class="inp inp-num">
+                        <input class="inp-piece" type="text" min="0" value="12">
+                      </div>
+                      <div class="type"><span class="name">Gross x</span><span class="price"><i class="lira">₺</i>0,85</span></div>
+                    </div>
+                    <div class="order-old"><span class="piece-old">16</span></div>
+                    <div class="order-price"><span class="price"> <i class="lira">₺</i>78,99</span></div>
+                  </div>
+                </li>
+                <li>
+                  <div class="order-row title"><span>OFİS GRUBU</span></div>
+                  <div class="order-row" id="order-row-001">
+                    <div class="order-product">
+                      <div class="img"><img src="images/05.jpg"></div>
+                      <div class="title-gr"><span class="code">EM346387</span><span class="title">Eclipse Mekanik Kursun Kalem</span><span class="mob-price"><span class="piece-price"><i class="lira">₺</i>0,85</span><span class="price"><i class="lira">₺</i>78,99</span></span></div><a class="sub-btn" data-uk-toggle="{target:'#order-row-001', cls:'opened'}"><i></i></a>
+                    </div>
+                    <div class="order-piece-price"><span class="price"> <i class="lira">₺</i>0,85</span></div>
+                    <div class="order-piece">
+                      <div class="inp inp-num">
+                        <input class="inp-piece" type="text" min="0" value="12">
+                      </div>
+                      <div class="type"><span class="name">Gross x</span><span class="price"><i class="lira">₺</i>0,85</span></div>
+                    </div>
+                    <div class="order-old"><span class="piece-old">16</span></div>
+                    <div class="order-price"><span class="price"> <i class="lira">₺</i>78,99</span></div>
+                  </div>
+                  <div class="order-row" id="order-row-002">
+                    <div class="order-product">
+                      <div class="img"><img src="images/05.jpg"></div>
+                      <div class="title-gr"><span class="code">EM346387</span><span class="title">Eclipse Mekanik Kursun Kalem</span><span class="mob-price"><span class="piece-price"><i class="lira">₺</i>0,85</span><span class="price"><i class="lira">₺</i>78,99</span></span></div><a class="sub-btn" data-uk-toggle="{target:'#order-row-002', cls:'opened'}"><i></i></a>
+                    </div>
+                    <div class="order-piece-price"><span class="price"> <i class="lira">₺</i>0,85</span></div>
+                    <div class="order-piece">
+                      <div class="inp inp-num">
+                        <input class="inp-piece" type="text" min="0" value="12">
+                      </div>
+                      <div class="type"><span class="name">Gross x</span><span class="price"><i class="lira">₺</i>0,85</span></div>
+                    </div>
+                    <div class="order-old"><span class="piece-old">16</span></div>
+                    <div class="order-price"><span class="price"> <i class="lira">₺</i>78,99</span></div>
+                  </div>
+                  <div class="order-row" id="order-row-003">
+                    <div class="order-product">
+                      <div class="img"><img src="images/05.jpg"></div>
+                      <div class="title-gr"><span class="code">EM346387</span><span class="title">Eclipse Mekanik Kursun Kalem</span><span class="mob-price"><span class="piece-price"><i class="lira">₺</i>0,85</span><span class="price"><i class="lira">₺</i>78,99</span></span></div><a class="sub-btn" data-uk-toggle="{target:'#order-row-003', cls:'opened'}"><i></i></a>
+                    </div>
+                    <div class="order-piece-price"><span class="price"> <i class="lira">₺</i>0,85</span></div>
+                    <div class="order-piece">
+                      <div class="inp inp-num">
+                        <input class="inp-piece" type="text" min="0" value="12">
+                      </div>
+                      <div class="type"><span class="name">Gross x</span><span class="price"><i class="lira">₺</i>0,85</span></div>
+                    </div>
+                    <div class="order-old"><span class="piece-old">16</span></div>
+                    <div class="order-price"><span class="price"> <i class="lira">₺</i>78,99</span></div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="order-right"> 
+          <div class="cart-summary">
+            <div class="cart-summary-title"><i class="icon-cart-2"></i><span class="title">Önceki Sipariş Özeti</span><span class="date">27.03.2015</span></div>
+            <ul class="cart-summary-detail">
+              <li><span class="title">Toplam</span><span class="numb"> <i class="lira">₺</i>11.200,02</span></li>
+              <li><span class="title">İskonto</span><span class="numb"> <i class="lira">₺</i>348,045</span></li>
+              <li><span class="title">Kazanılan Puan</span><span class="numb">1120</span></li>
+              <li><span class="title">Kazanılan Poşet Sayısı</span><span class="numb">300</span></li>
+              <li class="total"><span class="title">Tutar</span><span class="numb"> <i class="lira">₺</i>12.657,59</span></li>
+              <li class="button"><a class="uk-button-primary button-submit" href="javascript:void(0)">SİPARİŞİ ONAYLA</a></li>
+              <li class="export"><a class="to-mail" href="javascript:void(0)"> <i class="icon-mail"></i>MAİL GÖNDER</a><a class="to-print" href="javascript:void(0)"> <i class="icon-print"></i>ÇIKTI AL</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/vendor.js" charset="utf-8"></script>
+    <script src="js/allscripts.js" charset="utf-8"></script>
+  </body>
+</html>

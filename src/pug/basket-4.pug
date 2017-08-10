@@ -1,0 +1,26 @@
+doctype html
+
+html
+  
+  include template/head.pug
+  
+  body.ems-login.page-order.body-color
+
+    include template/header.pug  
+    .order-page.order-complete
+        //Sipariş onay sayfasında .order-complete classı almalı .order-page
+        .order-header
+            a(href="javascript:void(0)")
+                img(src="images/logo-light.png")
+        
+        .order-step-content
+            .thanks-desc
+                i.icon-print
+                span.title Teşekkürler
+                span.desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            a.uk-button-primary.btn-export(href="javascript:void(0)") SİPARİŞİN ÇIKTISINI AL
+            .uk-width-1-1
+                a.btn-return(href="javascript:void(0)") Başa Dön
+        
+    include template/script.pug
+    

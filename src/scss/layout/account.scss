@@ -1,0 +1,272 @@
+.page-account{ 
+    background: $white;
+    .page-account-wrapper{
+        display: flex;
+        margin-bottom: 40px;
+        .account-menu{
+            width: 240px;
+            margin-right: 80px;
+            margin-top: 15px;
+            .title{
+                @include Gotham;
+                font-size: 14px;
+                line-height: 2.14;
+                color: $blue;
+                padding-bottom: 15px;
+                margin-bottom: 15px;
+                border-bottom: 1px solid $grey-light;
+            }
+            .menu{
+                span{
+                    display: none;
+                    height: 60px;
+                    background: $blue;
+                    padding: 0 20px;
+                    font-size: 16px;
+                    color: $white;
+                }
+                ul{
+                    li{ 
+                        a{
+                            @include GothamBook;
+                            font-size: 14px;
+                            line-height: 2.14;
+                            color: $black;
+                        }
+                    }
+                }
+            }
+        }
+        .account-content{
+            width: calc( 100% - 320px );
+            margin-top: 30px;
+            .page-title{
+                font-size: 20px;
+                color: $black;
+            }
+            .page-desc{
+                @include GothamBook;
+                font-size: 14px;
+                line-height: 2.14;
+                color: #444444;
+                margin-top: 15px;
+            }
+            ul.order-list{
+                background: #fcfcfc;
+                border: 1px solid #dadfe3;
+                margin-top: 35px;
+                li{
+                    display: flex;
+                    flex-wrap: nowrap;
+                    align-items: flex-start;
+                    border-bottom: 1px solid #dadfe3;
+                    padding: 30px;
+
+                    font-size: 16px;
+                    color: $black;
+                    &:last-child{
+                        border-bottom: 0px solid #dadfe3;
+                    }
+                    .order-dealer{
+                        flex: 2;
+                    }
+                    .order-date,
+                    .order-price{
+                        flex: 1;
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+                    .order-button{
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+                    .title{
+                        width: 100%;
+                        @include GothamBook;
+                        font-size: 14px;
+                        color: #444444;
+                    }
+                    .btn-again{
+                        display: inline-block;
+                        padding-left: 30px;
+                        padding-right: 30px;
+                    }
+                }
+            }
+            ul.address-list{
+                background: #fcfcfc;
+                border: 1px solid #dadfe3;
+                margin-top: 35px;
+                li{
+                    display: flex;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    border-bottom: 1px solid #dadfe3;
+                    padding: 30px;
+                    font-size: 16px;
+                    color: $black;
+                    &:last-child{
+                        border-bottom: 0px solid #dadfe3;
+                    }
+                    .title{
+                        width: 100%;
+                        @include GothamBook;
+                        font-size: 14px;
+                        color: #444444;
+                    }
+                    .location{
+                        @include GothamBook;
+                        font-size: 14px;
+                        color: #444444;
+                    }
+                    .order-dealer{
+                        flex: 4;
+                    }
+                    .order-button{
+                        flex: 1;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        a{
+                            font-size: 14px;
+                            color: #0090f1;
+                            text-decoration: underline;
+                            text-decoration-skip: ink;
+                        }
+                    }
+                }
+            }
+            .btn-add-addres{
+                display: inline-block;
+                margin-top: 30px;
+                padding-left: 75px;
+                padding-right: 75px;
+                font-size: 16px;
+            }
+            
+        }
+    }
+}
+
+@media screen and (max-width:960px){
+    .page-account{ 
+        .page-account-wrapper{
+            flex-wrap: wrap;
+            margin: 0 -25px 40px;
+            .account-menu{
+                width: 100%;
+                margin-right: 0;
+                margin-top: 0px;
+                .title{
+                    display: none;
+                }
+                .menu{
+                    position: relative;
+                    span{
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        position: relative;
+                        z-index: 1;
+                        text-transform: uppercase;
+                        &:after{
+                            content: '\e815';
+                            font-family: "fontello";
+                            font-style: normal;
+                            font-size: 9px;
+                        }
+                    }
+                    ul{
+                        width: 100%;
+                        position: absolute;
+                        top: -100%;
+                        
+                        visibility: hidden;
+                        opacity: 0;
+                        height: 0;
+                        overflow: hidden;
+                        background: $white;
+                        transition: all 0.2s cubic-bezier(0.8, 0, 0.5, 1);
+                        box-shadow: 0px 1px 1px $body;
+                        li{
+                            width: 100%;
+                            padding: 15px 20px;
+                            border-bottom: 1px solid $grey-light;
+                        }
+                    }
+                    &.opened{
+                        ul{
+                            visibility: visible;
+                            opacity: 1;
+                            height: auto;
+                            overflow: auto;
+                            top: 60px;
+                        }
+                    }
+
+                }
+            }
+            .account-content{
+                width: 100%;
+                .page-title{
+                    display: block;
+                    text-align: center;
+                }
+                .page-desc{
+                    display: block;
+                    padding: 0 7%;
+                    text-align: center;
+                    font-size: 16px;
+                    line-height: inherit;
+                    margin-bottom: 30px;
+                }
+                
+                .btn-add-addres{
+                    display: block;
+                    margin-top: 30px;
+                    margin-left: 20px;
+                    margin-right: 20px;
+                    padding-left: inherit;
+                    padding-right: inherit;
+                    text-align: center;
+                }
+                ul.order-list{
+                    margin-top: 30px;
+                    li{
+                        flex-wrap: wrap;
+                        padding: 30px 20px;
+                        .order-dealer{
+                            flex: inherit;
+                            width: 100%;
+                            margin-bottom: 35px;
+                        }
+                        .btn-again{
+                            padding-left: 20px;
+                            padding-right: 20px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+                ul.address-list{
+                    margin-top: 30px;
+                    li{
+                        flex-wrap: wrap;
+                        font-size: 18px;
+                        padding: 30px 20px;
+                        .order-dealer{
+                            flex: inherit;
+                            width: 100%;
+                            margin-bottom: 28px;
+                        }
+                        .order-button{
+                            justify-content: flex-start;
+                            a:first-child{
+                                margin-right: 10%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

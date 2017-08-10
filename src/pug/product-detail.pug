@@ -1,0 +1,24 @@
+doctype html
+
+html
+  
+  include template/head.pug
+  
+  body.ems-login
+    //Üye girişi yapılmışsa body'e ems-login classı atılması gerekiyor.
+    
+    include template/header.pug
+
+    .product-detail-holder
+
+        include template/product-desc.pug
+
+        .prd-carousel-wrp
+            .uk-container.uk-container-center
+                include template/new-products.pug
+
+        include template/product-text.pug 
+
+    include template/footer.pug
+
+    include template/script.pug

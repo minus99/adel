@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- META-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="Adel">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <title>Adel</title>
+    <!-- CSS-->
+    <link rel="stylesheet" href="css/fontello.css" media="screen" title-no="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/uikit.css" media="screen" title-no="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/plugins.css" media="screen" title-no="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/style.css" media="screen" title-no="no title" charset="utf-8">
+    <!-- JS-->
+    <script src="js/jquery.min.js" charset="utf-8"></script>
+    <script src="js/uikit.min.js" charset="utf-8"></script>
+  </head>
+  <body class="ems-login">
+    <!--Üye girişi yapılmışsa body'e ems-login classı atılması gerekiyor.-->
+    <!-- HEADER START-->
+    <header class="adel-header">
+      <div class="header-top">
+        <div class="uk-container uk-container-center">
+          <div class="uk-flex uk-flex-space-between uk-flex-wrap-middle">
+            <div class="left-content">
+              <div class="dealers"><i class="icon-account"></i><span class="name">Batı Kitap Kırtasiye Bilg.San.Ltd.Sti</span><a class="uk-button uk-button-primary btn-change">Değiştir</a></div>
+            </div>
+            <div class="right-content">
+              <div class="account"><a class="btn-account">Murat Özdemir<i class="icon-account"></i></a><a class="btn-signin">Üyelik<i class="icon-account"></i></a></div><a class="btn-basket">Sepetim<i class="icon-cart"><i class="basket-count">3</i></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="adel-nav-bar uk-navbar uk-navbar-attached">
+        <div class="uk-container uk-container-center"><a class="uk-navbar-brand logo"><img class="uk-margin uk-margin-remove" src="images/menu-logo.png"></a><a class="nav-menu-mobile"><i class="icon-grid-list"></i></a>
+          <div class="menu-wrapper">
+            <div class="menu-header"><span>Kategori</span><a class="nav-menu-mobile-close"><i class="icon-close"></i></a></div>
+            <ul class="uk-navbar-nav menu">
+              <li><a href="javascript:void(0)">Ürünler</a>
+                <div class="subMenu-wrapper">
+                  <div class="subMenu">
+                    <ul> 
+                      <li> <a href="javascript:void(0)">Tüm Ürün Grupları</a></li>
+                      <li><a href="javascript:void(0)">Boyama Grubu</a></li>
+                      <li><a href="javascript:void(0)">Çanta Grubu</a></li>
+                      <li><a href="javascript:void(0)">Dosyalama Grubu</a></li>
+                      <li><a href="javascript:void(0)">Hobi/Eğlence Grubu</a></li>
+                      <li><a href="javascript:void(0)">İşaterleme Grubu</a></li>
+                      <li><a href="javascript:void(0)">Kağıt Grubu</a></li>
+                      <li><a href="javascript:void(0)">Ofis Grubu</a></li>
+                      <li><a href="javascript:void(0)">Oyuncak</a>
+                        <ul> 
+                          <li><a href="javascript:void(0)">Tüm Markalar</a></li>
+                          <li> <a href="javascript:void(0)">Adel</a>
+                            <ul>
+                              <li><a href="javascript:void(0)">Tüm Ürünler</a></li>
+                              <li><a href="javascript:void(0)">Defter</a></li>
+                              <li><a href="javascript:void(0)">Fon Kartonu</a></li>
+                              <li><a href="javascript:void(0)">Grapon</a></li>
+                              <li><a href="javascript:void(0)">Karışık Set</a></li>
+                            </ul>
+                          </li>
+                          <li><a href="javascript:void(0)">Adeland</a></li>
+                          <li><a href="javascript:void(0)">Faber-Castell</a></li>
+                          <li><a href="javascript:void(0)">OEM</a></li>
+                          <li><a href="javascript:void(0)">Graf Von Faber-Castell</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="javascript:void(0)">Sanat Grubu</a></li>
+                      <li><a href="javascript:void(0)">Teknik Grubu</a></li>
+                      <li><a href="javascript:void(0)">Yazım Grubu</a></li>
+                      <li><a href="javascript:void(0)">Markalar</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li><a href="javascript:void(0)">Yeni Ürünler</a></li>
+              <li><a href="javascript:void(0)">Blister</a></li>
+              <li><a href="javascript:void(0)">Standlar</a></li>
+              <li><a href="javascript:void(0)">İskontolu Ürünler</a></li>
+            </ul>
+          </div>
+          <div class="uk-navbar-content uk-navbar-flip p-0 search-bar-wrapper">
+            <form class="uk-form uk-margin-remove uk-display-inline-block">
+              <div class="page-search">
+                <input type="text" name="search" id="search" placeholder="Ürün kodu ile ara">
+                <button class="submit" type="button" name="submit"><i class="icon-search"></i></button>
+              </div>
+              <div class="ems-search-suggestion">
+                <div class="ems-search-suggestion">
+                  <div class="suggestion-wrapper"></div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="product-detail-holder">
+      <div class="prd-detail-wrapper">
+        <div class="uk-container uk-container-center">
+          <div class="prd-detail-holder">
+            <div class="prd-left" id="sticky">
+              <div class="prd-slide uk-slidenav-position" data-uk-slideshow="{autoplay:true, animation: 'scroll'}" data-zoom="true" data-title="Eclipse Mekanik Kursun Kalem" data-uk-sticky="{boundary: true, media: 960}">
+                <ul class="uk-slideshow">
+                  <li data-large="images/13-large.jpg" data-thumbs="images/13-thumbs.jpg"><img src="images/13.jpg"></li>
+                  <li data-large="images/13-large.jpg" data-thumbs="images/13-thumbs.jpg"><img src="images/13.jpg"></li>
+                  <li data-large="images/13-large.jpg" data-thumbs="images/13-thumbs.jpg"><img src="images/13.jpg"></li>
+                  <li data-large="images/13-large.jpg" data-thumbs="images/13-thumbs.jpg"><img src="images/13.jpg"></li>
+                  <li data-large="images/13-large.jpg" data-thumbs="images/13-thumbs.jpg"><img src="images/13.jpg"></li>
+                  <li data-large="images/13-large.jpg" data-thumbs="images/13-thumbs.jpg"><img src="images/13.jpg"></li>
+                </ul><a class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous"></a><a class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next"></a>
+                <ul class="uk-dotnav uk-dotnav-contrast uk-position-bottom uk-flex-center uk-flex-middle">
+                  <li data-uk-slideshow-item="0"><a href="#"></a></li>
+                  <li data-uk-slideshow-item="1"><a href="#"></a></li>
+                  <li data-uk-slideshow-item="2"><a href="#"></a></li>
+                  <li data-uk-slideshow-item="3"><a href="#"></a></li>
+                  <li data-uk-slideshow-item="4"><a href="#"></a></li>
+                  <li data-uk-slideshow-item="5"><a href="#"></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="prd-right">
+              <div class="prd-info">
+                <div class="prd-code">MAX - EM346387</div>
+                <div class="prd-name">Eclipse Mekanik Kursun Kalem</div>
+                <div class="piece-price"><span class="type">Gross</span><i class="lira">₺</i><span class="price">4,85</span></div>
+                <form class="uk-form">
+                  <fieldset>
+                    <div class="form-row">
+                      <div class="col-1">
+                        <div class="title">RENK</div>
+                      </div>
+                      <div class="col-4">
+                        <div class="select-color dropdown" data-uk-drp="{'fnd':'.color-box', 'typ': 'html'}"><span>Renk </span>
+                          <ul>
+                            <li class="selected">
+                              <div class="color-box"> <span class="color cl-green"></span><span class="name">Yeşil</span></div>
+                            </li>
+                            <li> 
+                              <div class="color-box"><span class="color cl-blue"></span><span class="name">Mavi</span></div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-1">
+                        <div class="title">BİRİM</div>
+                      </div>
+                      <div class="col-4">
+                        <div class="select-gross dropdown" data-uk-drp="{'fnd':'.holder', 'typ': 'html'}"><span>Gross</span>
+                          <ul>
+                            <li>
+                              <div class="holder">
+                                <div class="gross-box"><span class="gross-wrp"><span class="name">Gross </span><span class="piece">18 Adet</span></span><span class="price"><i class="lira">₺</i>4,85</span></div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="holder">
+                                <div class="gross-box"><span class="gross-wrp"><span class="name">Gross </span><span class="piece">18 Adet</span></span><span class="price"><i class="lira">₺</i>4,85</span></div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-1">
+                        <div class="title">ADET</div>
+                      </div>
+                      <div class="col-4">
+                        <div class="col-75">
+                          <div class="inp inp-num">
+                            <input class="inp-piece" type="text" min="0" value="12">
+                          </div>
+                        </div>
+                        <div class="col-25 uk-flex-center">
+                          <div class="total-price"> <span>Toplam</span><span class="price"><i class="lira">₺</i><span>34,85 </span></span></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <button class="uk-button uk-button-primary uk-width-1-1" type="submit">SEPETE EKLE</button>
+                    </div>
+                  </fieldset>
+                </form>
+                <div class="point-desc"> <b class="m-r-5">!</b>Bu siparişten <i class="lira">₺</i>20 değerinde puan kazanacaksınız.</div>
+              </div>
+              <div class="gift-prd-wrapper">
+                <div class="title-wrp">HEDİYE ÜRÜNLER</div>
+                <div class="prd-list" id="gift-prd-list">
+                  <div class="prd-item">
+                    <div class="prd-img"><img src="images/13.jpg"></div>
+                    <div class="prd-info">
+                      <div class="prd-code">EM346387</div><span class="title">Eclipse Mekanik Kursun Kalem</span>
+                      <div class="prd-piece-price">
+                        <div class="pp-item"><span class="name">Adet</span><span class="desc"><i class="lira">₺</i><span>0,85</span></span></div>
+                        <div class="pp-item"><span class="name">Gross</span><span class="desc line-through"><i class="lira">₺</i><span>13,49</span></span></div>
+                        <div class="pp-item"><span class="name">Fiyat</span><span class="desc"><i class="lira">₺</i><span>0,0</span></span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="prd-item">
+                    <div class="prd-img"><img src="images/13.jpg"></div>
+                    <div class="prd-info">
+                      <div class="prd-code">EM346387</div><span class="title">Eclipse Mekanik Kursun Kalem</span>
+                      <div class="prd-piece-price">
+                        <div class="pp-item"><span class="name">Adet</span><span class="desc"><i class="lira">₺</i><span>0,85</span></span></div>
+                        <div class="pp-item"><span class="name">Gross</span><span class="desc line-through"><i class="lira">₺</i><span>13,49</span></span></div>
+                        <div class="pp-item"><span class="name">Fiyat</span><span class="desc"><i class="lira">₺</i><span>0,0</span></span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="prd-item">
+                    <div class="prd-img"><img src="images/13.jpg"></div>
+                    <div class="prd-info">
+                      <div class="prd-code">EM346387</div><span class="title">Eclipse Mekanik Kursun Kalem</span>
+                      <div class="prd-piece-price">
+                        <div class="pp-item"><span class="name">Adet</span><span class="desc"><i class="lira">₺</i><span>0,85</span></span></div>
+                        <div class="pp-item"><span class="name">Gross</span><span class="desc line-through"><i class="lira">₺</i><span>13,49</span></span></div>
+                        <div class="pp-item"><span class="name">Fiyat</span><span class="desc"><i class="lira">₺</i><span>0,0</span></span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="prd-item">
+                    <div class="prd-img"><img src="images/13.jpg"></div>
+                    <div class="prd-info">
+                      <div class="prd-code">EM346387</div><span class="title">Eclipse Mekanik Kursun Kalem</span>
+                      <div class="prd-piece-price">
+                        <div class="pp-item"><span class="name">Adet</span><span class="desc"><i class="lira">₺</i><span>0,85</span></span></div>
+                        <div class="pp-item"><span class="name">Gross</span><span class="desc line-through"><i class="lira">₺</i><span>13,49</span></span></div>
+                        <div class="pp-item"><span class="name">Fiyat</span><span class="desc"><i class="lira">₺</i><span>0,0</span></span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="prd-item">
+                    <div class="prd-img"><img src="images/13.jpg"></div>
+                    <div class="prd-info">
+                      <div class="prd-code">EM346387</div><span class="title">Eclipse Mekanik Kursun Kalem</span>
+                      <div class="prd-piece-price">
+                        <div class="pp-item"><span class="name">Adet</span><span class="desc"><i class="lira">₺</i><span>0,85</span></span></div>
+                        <div class="pp-item"><span class="name">Gross</span><span class="desc line-through"><i class="lira">₺</i><span>13,49</span></span></div>
+                        <div class="pp-item"><span class="name">Fiyat</span><span class="desc"><i class="lira">₺</i><span>0,0</span></span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="prd-item">
+                    <div class="prd-img"><img src="images/13.jpg"></div>
+                    <div class="prd-info">
+                      <div class="prd-code">EM346387</div><span class="title">Eclipse Mekanik Kursun Kalem</span>
+                      <div class="prd-piece-price">
+                        <div class="pp-item"><span class="name">Adet</span><span class="desc"><i class="lira">₺</i><span>0,85</span></span></div>
+                        <div class="pp-item"><span class="name">Gross</span><span class="desc line-through"><i class="lira">₺</i><span>13,49</span></span></div>
+                        <div class="pp-item"><span class="name">Fiyat</span><span class="desc"><i class="lira">₺</i><span>0,0</span></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="more-wrp"><a class="btn-more" href="javascript:void(0)" data-uk-toggle="{target:'#gift-prd-list', cls:'opened'}">+ Daha Fazla Göster</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="prd-carousel-wrp">
+        <div class="uk-container uk-container-center">
+          <div class="new-product-cr-wrapper uk-slidenav-position" data-uk-slider>
+            <div class="prd-news-title uk-flex uk-flex-center uk-flex-middle uk-flex-wrap">Yeni Ürünler</div>
+            <div class="uk-slider-container">
+              <ul class="uk-slider uk-grid uk-grid-width-medium-1-4 new-product-cr">
+                <li>
+                  <div class="item"><i class="ico ico-gift"> </i>
+                    <div class="prd-img"><img src="images/05.jpg"></div>
+                    <div class="prd-info uk-flex uk-flex-space-between"><span>EM346387</span><span>7 Renk</span></div>
+                    <div class="prd-title">Eclipse Mekanik Kurşun Kalem</div>
+                    <div class="uk-flex prd-price-wrapper">
+                      <div class="prd-price"><span class="name">Adet</span><span class="price"> <i class="lira">₺</i><span>0,85</span></span></div>
+                      <div class="prd-price"><span class="name">Gross</span><span class="price"><i class="lira">₺</i><span>13,49</span></span></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item"><i class="ico"> </i>
+                    <div class="prd-img"><img src="images/05.jpg"></div>
+                    <div class="prd-info uk-flex uk-flex-space-between"><span>EM346387</span><span>7 Renk</span></div>
+                    <div class="prd-title">Eclipse Mekanik Kurşun Kalem</div>
+                    <div class="uk-flex prd-price-wrapper">
+                      <div class="prd-price"><span class="name">Adet</span><span class="price"> <i class="lira">₺</i><span>0,85</span></span></div>
+                      <div class="prd-price"><span class="name">Gross</span><span class="price"><i class="lira">₺</i><span>13,49</span></span></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item"><i class="ico ico-new"> </i>
+                    <div class="prd-img"><img src="images/05.jpg"></div>
+                    <div class="prd-info uk-flex uk-flex-space-between"><span>EM346387</span><span>7 Renk</span></div>
+                    <div class="prd-title">Eclipse Mekanik Kurşun Kalem</div>
+                    <div class="uk-flex prd-price-wrapper">
+                      <div class="prd-price"><span class="name">Adet</span><span class="price"> <i class="lira">₺</i><span>0,85</span></span></div>
+                      <div class="prd-price"><span class="name">Gross</span><span class="price"><i class="lira">₺</i><span>13,49</span></span></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item"><i class="ico ico-discount"> </i>
+                    <div class="prd-img"><img src="images/05.jpg"></div>
+                    <div class="prd-info uk-flex uk-flex-space-between"><span>EM346387</span><span>7 Renk</span></div>
+                    <div class="prd-title">Eclipse Mekanik Kurşun Kalem</div>
+                    <div class="uk-flex prd-price-wrapper">
+                      <div class="prd-price"><span class="name">Adet</span><span class="price"> <i class="lira">₺</i><span>0,85</span></span></div>
+                      <div class="prd-price"><span class="name">Gross</span><span class="price"><i class="lira">₺</i><span>13,49</span></span></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item"><i class="ico ico-discount-2"> </i>
+                    <div class="prd-img"><img src="images/05.jpg"></div>
+                    <div class="prd-info uk-flex uk-flex-space-between"><span>EM346387</span><span>7 Renk</span></div>
+                    <div class="prd-title">Eclipse Mekanik Kurşun Kalem</div>
+                    <div class="uk-flex prd-price-wrapper">
+                      <div class="prd-price"><span class="name">Adet</span><span class="price"> <i class="lira">₺</i><span>0,85</span></span></div>
+                      <div class="prd-price"><span class="name">Gross</span><span class="price"><i class="lira">₺</i><span>13,49</span></span></div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="item"><i class="ico"> </i>
+                    <div class="prd-img"><img src="images/05.jpg"></div>
+                    <div class="prd-info uk-flex uk-flex-space-between"><span>EM346387</span><span>7 Renk</span></div>
+                    <div class="prd-title">Eclipse Mekanik Kurşun Kalem</div>
+                    <div class="uk-flex prd-price-wrapper">
+                      <div class="prd-price"><span class="name">Adet</span><span class="price"> <i class="lira">₺</i><span>0,85</span></span></div>
+                      <div class="prd-price"><span class="name">Gross</span><span class="price"><i class="lira">₺</i><span>13,49</span></span></div>
+                    </div>
+                  </div>
+                </li>
+              </ul><a class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slider-item="previous"> </a><a class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slider-item="next"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="prd-text-wrapper">
+        <div class="uk-container uk-container-center">
+          <div class="prd-text-holder">
+            <div class="prd-item">
+              <div class="desc">
+                <div class="title">Eclipse Mekanik Kursun Kalem Özellikler</div>
+                <div class="text">- Lorem ipsum dolor sit amet, conset - Consectetur Sed do eiusmod tempor  - Ut labore et dolore magna aliqua. Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</div>
+              </div>
+              <div class="img"><img src="images/11.jpg"></div>
+            </div>
+            <div class="prd-item">
+              <div class="desc">
+                <div class="title">Eclipse Mekanik Kursun Kalem Özellikler</div>
+                <div class="text">- Lorem ipsum dolor sit amet, conset - Consectetur Sed do eiusmod tempor  - Ut labore et dolore magna aliqua. Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</div>
+              </div>
+              <div class="img"><img src="images/12.jpg"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- FOOTER START-->
+    <footer class="adel-footer">
+      <div class="uk-container uk-container-center">
+        <div class="uk-flex uk-flex-middle uk-flex-center">
+          <div class="uk-width-1-1 uk-width-large-3-4">
+            <div class="footer-menu uk-grid">
+              <div class="uk-width-1-1 uk-width-large-2-4"><span class="title">Kategoriler</span>
+                <ul class="categories">
+                  <li> <a href="javascript:void(0)">Tüm Ürün Grupları</a></li>
+                  <li><a href="javascript:void(0)">Boyama Grubu</a></li>
+                  <li><a href="javascript:void(0)">Çanta Grubu</a></li>
+                  <li><a href="javascript:void(0)">Dosyalama Grubu</a></li>
+                  <li><a href="javascript:void(0)">Hobi/Eğlence Grubu</a></li>
+                  <li><a href="javascript:void(0)">İşaterleme Grubu</a></li>
+                  <li><a href="javascript:void(0)">Kağıt Grubu</a></li>
+                  <li><a href="javascript:void(0)">Ofis Grubu</a></li>
+                  <li><a href="javascript:void(0)">Oyuncak</a></li>
+                  <li><a href="javascript:void(0)">Sanat Grubu</a></li>
+                  <li><a href="javascript:void(0)">Teknik Grubu</a></li>
+                  <li><a href="javascript:void(0)">Yazım Grubu</a></li>
+                </ul>
+              </div>
+              <div class="uk-width-1-1 uk-width-large-1-4"><span class="title">Markalar</span>
+                <ul>
+                  <li> <a href="javascript:void(0)">Tüm Markalar</a></li>
+                  <li><a href="javascript:void(0)">Adel</a></li>
+                  <li><a href="javascript:void(0)">Adeland</a></li>
+                  <li><a href="javascript:void(0)">Faber-Castell</a></li>
+                  <li><a href="javascript:void(0)">OEM</a></li>
+                  <li><a href="javascript:void(0)">Graf Von Faber-Castell</a></li>
+                </ul>
+              </div>
+              <div class="uk-width-1-1 uk-width-large-1-4"><span class="title">Hakkımızda</span>
+                <ul>
+                  <li> <a href="javascript:void(0)">Hakkımızda</a></li>
+                  <li><a href="javascript:void(0)">İnsan Kaynakları</a></li>
+                  <li><a href="javascript:void(0)">Gizlilik Politikası</a></li>
+                  <li><a href="javascript:void(0)">İletişim</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="foter-bottom uk-width-1-1 uk-width-large-3-4">
+          <div class="social-media uk-flex uk-flex-center"><a class="facebook" href="javascript:void(0)"><i class="icon-facebook"></i></a><a class="twitter" href="javascript:void(0)"><i class="icon-twitter"></i></a><a class="youtube" href="javascript:void(0)"><i class="icon-youtube"></i></a><a class="instagram" href="javascript:void(0)"><i class="icon-instagram"></i></a></div>
+          <div class="copyright uk-flex uk-flex-center">Copyright &reg;2017 Adel, tüm hakları saklıdır.</div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/vendor.js" charset="utf-8"></script>
+    <script src="js/allscripts.js" charset="utf-8"></script>
+  </body>
+</html>

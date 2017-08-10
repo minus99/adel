@@ -1,0 +1,31 @@
+.uk-grid.uk-grid-medium.main-banner
+    .uk-width-1-1.uk-width-large-2-3.main-slider
+        .uk-slidenav-position(data-uk-slideshow="{autoplay:true, animation: 'scroll'}")
+            ul.uk-slideshow
+                - for (var x = 0; x < 6; x++)
+                    li
+                        img(src="images/01.jpg")
+                        .uk-overlay-panel.uk-flex.uk-flex-middle.uk-flex-wrap.uk-flex-wrap-middle.slide-description-wrapper
+                            span.title Defterlerde Size Özel Kampanya
+                            p.desc Latraset sheets containing Lorem ipsum passages, and more recently with desktop publishing software.
+                            a.btn-detail Kampanya Detay
+            
+            a.uk-slidenav.uk-slidenav-contrast.uk-slidenav-previous(data-uk-slideshow-item="previous")
+            a.uk-slidenav.uk-slidenav-contrast.uk-slidenav-next(data-uk-slideshow-item="next")
+            - var n = 0;
+            ul.uk-dotnav.uk-dotnav-contrast.uk-position-bottom.uk-flex-center.uk-flex-middle
+                while n < 6
+                    li(data-uk-slideshow-item=n++): a(href="#")
+              
+    .uk-width-1-1.uk-width-large-1-3
+        .banner-box
+            .banner-item.uk-slidenav-position
+                img(src="images/03.jpg")
+                .uk-overlay-panel.uk-flex.uk-flex-center.uk-flex-middle.uk-flex-wrap.uk-flex-wrap-middle.banner-holder
+                    span.uk-text-center.uk-width-1-1.title Fiyat Listesi
+                    a.btn-detail İncele
+            .banner-item.uk-slidenav-position
+                img(src="images/04.jpg") 
+                .uk-overlay-panel.uk-flex.uk-flex-center.uk-flex-middle.uk-flex-wrap.uk-flex-wrap-middle.banner-holder
+                    span.uk-text-center.uk-width-1-1.title Faber-Castel
+                    span.uk-text-center.uk-width-1-1.desc 216 Kataloğu

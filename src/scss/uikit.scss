@@ -1,0 +1,11 @@
+@import "../../vendor/uikit/scss/uikit-mixins.scss";
+
+// your custom code goes here, e.g. mixins, variables
+
+$icon-font-path:  "../fonts/fontawesome" !default;
+$grid-gutter-vertical: 20px !default;
+$grid-gutter-horizontal: 20px !default;
+$utility-container-large-max-width: 1270px !default;
+ 
+@import "../../vendor/uikit/scss/uikit.scss";
+@import "../../vendor/uikit/scss/components/autocomplete.scss";

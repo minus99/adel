@@ -1,0 +1,41 @@
+doctype html
+
+html
+  
+  include template/head.pug
+  
+  body.ems-login.page-account
+    //Üye girişi yapılmışsa body'e ems-login classı atılması gerekiyor.
+    
+    include template/header.pug
+
+    .uk-container.uk-container-center
+        .page-account-wrapper
+            include template/account-menu.pug
+
+            .account-content
+                .page-title Adres Bilgilerim
+                .page-desc  Adreslerinizi görüntüleyebilir, degisiklik yapabilir ve yeni adres ekleyebilirsiniz.               
+                ul.address-list
+                    li 
+                        .order-dealer
+                            .title Bayi
+                            .name BATI KİTAP KIRTASiYE BİLG. SAN. LTD. ŞTİ.
+                            .location Ümraniye, İstanbul
+                        .order-button
+                            a.btn-view(href="javascript:void(0)") Görüntüle
+                            a.btn-view(href="javascript:void(0)") Sil
+                    li 
+                        .order-dealer
+                            .title Bayi
+                            .name BATI KİTAP KIRTASiYE BİLG. SAN. LTD. ŞTİ.
+                            .location Ümraniye, İstanbul
+                        .order-button
+                            a.btn-view(href="javascript:void(0)") Görüntüle
+                            a.btn-delete(href="javascript:void(0)") Sil
+                
+                a.uk-button-primary.btn-add-addres(href="javascript:void(0)") YENİ ADRES EKLE
+
+    include template/footer.pug
+
+    include template/script.pug

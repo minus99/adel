@@ -1,0 +1,240 @@
+doctype html
+
+html
+  
+  include template/head.pug
+  
+  body.ems-login.page-order
+
+    include template/header.pug  
+    .order-page
+        .order-header
+            a(href="javascript:void(0)")
+                img(src="images/logo-light.png")
+
+        .order-content
+            .order-left 
+                .page-title
+                    span Sipariş Özeti
+                .order-cat
+                    .order-group.dropdown(data-uk-drp="{'fnd':'.long'}")
+                        span GRUPLAR
+                        
+                        ul(data-uk-switcher="{connect:'#cart-order-group'}")
+                            li.all-group( onclick="events.clicked.allTabGroup(this);") 
+                                a(href="javascript:void(0)") 
+                                    span.short 
+                                    span.long TÜM ÜRÜN GRUPLARI
+                            li.selected.uk-active(aria-expanded="true")
+                                a(href="javascript:void(0)") 
+                                    span.short B
+                                    span.long BOYAMA GRUBU
+                            li 
+                                a(href="javascript:void(0)") 
+                                    span.short Ç
+                                    span.long ÇANTA GRUBU
+                            li 
+                                a(href="javascript:void(0)") 
+                                    span.short D
+                                    span.long DOSYALAMA GRUBU
+                            li
+                                a(href="javascript:void(0)") 
+                                    span.short H
+                                    span.long HOBİ/ EĞLENCE GRUBU
+                            li 
+                                a(href="javascript:void(0)") 
+                                    span.short İ
+                                    span.long İŞARETLEME GRUBU
+                            li 
+                                a(href="javascript:void(0)")
+                                    span.short K
+                                    span.long KAĞIT GRUBU
+                            li 
+                                a(href="javascript:void(0)")
+                                    span.short O
+                                    span.long OFİS GRUBU
+                .order-box 
+                    .order-table
+                        .order-row.head
+                            .order-product
+                                span ÜRÜN
+
+                            .order-piece-price
+                                span ADET FİYATI
+
+                            .order-piece
+                                span ADET
+
+                            .order-old
+                                span ÖNCEKİ
+
+                            .order-price
+                                span FİYAT
+                        
+                        ul#cart-order-group.uk-switcher.cart-order-items
+                            li.all-order 
+                            - var order_cat = [ 'BOYAMA GRUBU', 'ÇANTA GRUBU', 'DOSYALAMA GRUBU', 'HOBİ/ EĞLENCE GRUBU', 'İŞARETLEME GRUBU', 'KAĞIT GRUBU', 'OFİS GRUBU' ];
+                              each item in order_cat
+                                li
+                                    .order-row.title
+                                        span= item
+                                    .order-row#order-row-001
+                                        .order-product
+                                            .img
+                                                img(src="images/05.jpg")
+                                            .title-gr
+                                                span.code EM346387
+                                                span.title Eclipse Mekanik Kursun Kalem
+                                                span.mob-price
+                                                    span.piece-price
+                                                        i.lira ₺
+                                                        |0,85
+
+                                                    span.price
+                                                        i.lira ₺
+                                                        |78,99
+                                            a.sub-btn(data-uk-toggle="{target:'#order-row-001', cls:'opened'}")
+                                                i
+
+                                        .order-piece-price
+                                            span.price 
+                                                i.lira ₺
+                                                |0,85
+
+                                        .order-piece
+                                            .inp.inp-num
+                                                input(type="text" min="0" value="12").inp-piece
+                                            .type
+                                                span.name Gross x
+                                                span.price
+                                                    i.lira ₺
+                                                    |0,85
+                                        .order-old
+                                            span.piece-old 16
+
+                                        .order-price
+                                            span.price 
+                                                i.lira ₺
+                                                |78,99
+
+
+                                    .order-row#order-row-002
+                                        .order-product
+                                            .img
+                                                img(src="images/05.jpg")
+                                            .title-gr
+                                                span.code EM346387
+                                                span.title Eclipse Mekanik Kursun Kalem
+                                                span.mob-price
+                                                    span.piece-price
+                                                        i.lira ₺
+                                                        |0,85
+
+                                                    span.price
+                                                        i.lira ₺
+                                                        |78,99
+                                            a.sub-btn(data-uk-toggle="{target:'#order-row-002', cls:'opened'}")
+                                                i
+
+                                        .order-piece-price
+                                            span.price 
+                                                i.lira ₺
+                                                |0,85
+
+                                        .order-piece
+                                            .inp.inp-num
+                                                input(type="text" min="0" value="12").inp-piece
+                                            .type
+                                                span.name Gross x
+                                                span.price
+                                                    i.lira ₺
+                                                    |0,85
+                                        .order-old
+                                            span.piece-old 16
+
+                                        .order-price
+                                            span.price 
+                                                i.lira ₺
+                                                |78,99
+                                    .order-row#order-row-003
+                                        .order-product
+                                            .img
+                                                img(src="images/05.jpg")
+                                            .title-gr
+                                                span.code EM346387
+                                                span.title Eclipse Mekanik Kursun Kalem
+                                                span.mob-price
+                                                    span.piece-price
+                                                        i.lira ₺
+                                                        |0,85
+
+                                                    span.price
+                                                        i.lira ₺
+                                                        |78,99
+                                            a.sub-btn(data-uk-toggle="{target:'#order-row-003', cls:'opened'}")
+                                                i
+
+                                        .order-piece-price
+                                            span.price 
+                                                i.lira ₺
+                                                |0,85
+
+                                        .order-piece
+                                            .inp.inp-num
+                                                input(type="text" min="0" value="12").inp-piece
+                                            .type
+                                                span.name Gross x
+                                                span.price
+                                                    i.lira ₺
+                                                    |0,85
+                                        .order-old
+                                            span.piece-old 16
+
+                                        .order-price
+                                            span.price 
+                                                i.lira ₺
+                                                |78,99
+                                    
+            .order-right 
+                .cart-summary
+                    .cart-summary-title
+                        i.icon-cart-2
+                        span.title Önceki Sipariş Özeti
+                        span.date 27.03.2015
+                    
+                    ul.cart-summary-detail
+                        li
+                            span.title Toplam
+                            span.numb 
+                                i.lira ₺
+                                | 11.200,02
+                        li
+                            span.title İskonto
+                            span.numb 
+                                i.lira ₺
+                                | 348,045
+                        li
+                            span.title Kazanılan Puan
+                            span.numb 1120
+                        li
+                            span.title Kazanılan Poşet Sayısı
+                            span.numb 300
+                        
+                        li.total
+                            span.title Tutar
+                            span.numb 
+                                i.lira ₺
+                                | 12.657,59
+                        li.button
+                            a.uk-button-primary.button-submit(href="javascript:void(0)") SİPARİŞİ ONAYLA
+                        
+                        li.export
+                            a.to-mail(href="javascript:void(0)") 
+                                i.icon-mail
+                                | MAİL GÖNDER
+                            a.to-print(href="javascript:void(0)") 
+                                i.icon-print
+                                | ÇIKTI AL
+
+    include template/script.pug
+    

@@ -1,0 +1,32 @@
+doctype html
+
+html
+  
+  include template/head.pug
+  
+  body.ems-login.page-order
+
+    include template/header.pug  
+    .order-page.order-complete
+        //Sipariş onay sayfasında .order-complete classı almalı .order-page
+        .order-header
+            a(href="javascript:void(0)")
+                img(src="images/logo-light.png")
+        
+        .order-step-content
+            .comp-info
+                i.icon-store
+                span.subTitle Bayi
+                span.title BATI KİTAP KIRTASİYE BİLG.SAN.LTD.ŞTİ.
+                span.address Ümraniye, İstanbul
+
+            .baset-desc 
+                i.icon-cart-2
+                span.title Sipariş Toplamı
+                span.total-price
+                    i.lira ₺
+                    |12.657,59
+            a.uk-button-primary.btn-confirm(href="javascript:void(0)") ONAYLA
+        
+    include template/script.pug
+    

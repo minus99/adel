@@ -1,0 +1,181 @@
+.main-banner{
+    margin-top: 20px;
+    .slide-description-wrapper{
+        padding: 50px;
+        .title{
+            display: block;
+            font-size: 26px;
+            margin:0 0 15px;
+        }
+        .desc{
+            display: block;
+            @include GothamBook;
+            font-size:18px;
+            margin:0 0 40px;
+        }
+    }
+
+    .banner-box{
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+    }
+    .banner-box .banner-item{
+        height: calc(50% - 10px);
+        margin: 0 0 20px 0;
+    }
+    .banner-box .banner-item:last-child{
+        margin: 0;
+    }
+    .banner-box .banner-item img{
+        height: 100%;
+    }
+    .banner-box .title{ 
+        @include Gotham;
+        font-size: 28px;
+        color: $white;
+        margin-bottom: 11px;
+    }
+    .banner-box .desc{ 
+        @include GothamBook;
+        font-size: 18px;
+        color: $white;
+    }
+    .banner-box .btn-detail{
+        margin-top:15px;
+    } 
+
+    .main-slider{
+        .uk-slidenav-position .uk-slidenav-previous {
+            left: -5px;
+            display: none;
+        }
+        .uk-slidenav-position .uk-slidenav-next {
+            right: -5px;
+            display: none;
+        }
+        .uk-dotnav{
+            margin-bottom:8px;
+            display: none;
+        }
+        .uk-dotnav > li{
+            margin-top: 0;
+        }
+    }
+}
+
+@media screen and (min-width:961px){
+    .main-slider{
+        > div,
+        ul.uk-slideshow,
+        ul.uk-slideshow li{
+            height: 100% !important;
+        }
+    }
+}
+@media screen and (max-width:960px){
+    .main-banner{
+        margin: 0 -25px;
+        > div{
+            padding: 0 !important;
+        }
+        .uk-slideshow li .uk-cover-background.uk-position-cover{
+            bottom: inherit;
+            top: inherit;
+            height: 300px;
+        }
+        .uk-slideshow li > img{
+            height: 300px !important;
+            margin-bottom: 36px;
+        }
+        .slide-description-wrapper{
+            padding: 20px;
+            position: initial !important;
+            margin-bottom: 10px;
+            .title{
+                font-size: 28px;
+                color: $black;
+                line-height: 30px;
+                text-align: center;
+            }
+            .desc{
+                font-size: 20px;
+                color: $grey-dark ;
+                text-align: center;
+            }
+            .btn-detail{
+                width: 100%;
+                background-color: $blue;
+                text-align: center;
+                color: $white;
+            }
+        }
+
+        .banner-box{
+            height: auto;
+        }
+        .banner-box .banner-item{
+            height: auto;
+            width: 100%;
+            margin: 0 0 5px 0;
+        }
+        .banner-box .banner-item:last-child{
+            margin: 0 0 15px 0;
+        }
+        .banner-box .banner-item .banner-holder{
+            position: initial;
+            display: block;
+            padding: 25px;
+        }
+        .banner-box .banner-item img{
+            height: auto;
+            width: 100%;
+        }
+        .banner-box .title{ 
+            display: block;
+            color: $black;
+        }
+        .banner-box .desc{ 
+            display: block;
+            font-size: 20px;
+            text-align: center;
+            color: #444444;
+        }
+        .banner-box .btn-detail{
+            width: 100%;
+            background-color: $blue;
+            text-align: center;
+            color: $white;
+        }
+
+        .main-slider{
+            .uk-slidenav-position .uk-slidenav-next,
+            .uk-slidenav-position .uk-slidenav-previous {
+                display: none;
+            }
+            .uk-dotnav{
+                display: flex;
+                margin-bottom: 0px;
+                top: 336px;
+                bottom: initial;
+                li{
+                    padding-left: 0px;
+                    a{
+                        background: #d8d8d8;
+                        transform: scale(0.5);
+                    }
+                    &.uk-active a:after{
+                        content: " ";
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        border: 4px solid $blue;
+                        border-radius: 50%;
+                        position: absolute;
+                        z-index: 100;
+                    }
+                }
+            }
+        }
+    }
+}

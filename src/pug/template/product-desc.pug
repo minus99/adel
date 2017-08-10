@@ -1,0 +1,119 @@
+.prd-detail-wrapper
+    .uk-container.uk-container-center
+        .prd-detail-holder
+            .prd-left#sticky
+                .prd-slide.uk-slidenav-position(data-uk-slideshow="{autoplay:true, animation: 'scroll'}" data-zoom="true" data-title="Eclipse Mekanik Kursun Kalem" data-uk-sticky="{boundary: true, media: 960}")
+                    ul.uk-slideshow
+                        - for (var x = 0; x < 6; x++)
+                            li(data-large="images/13-large.jpg" data-thumbs="images/13-thumbs.jpg")
+                                img(src="images/13.jpg")
+                    
+                    a.uk-slidenav.uk-slidenav-contrast.uk-slidenav-previous(data-uk-slideshow-item="previous")
+                    a.uk-slidenav.uk-slidenav-contrast.uk-slidenav-next(data-uk-slideshow-item="next")
+                    - var n = 0;
+                    ul.uk-dotnav.uk-dotnav-contrast.uk-position-bottom.uk-flex-center.uk-flex-middle
+                        while n < 6
+                            li(data-uk-slideshow-item=n++): a(href="#")
+            
+            .prd-right
+                .prd-info
+                    .prd-code MAX - EM346387
+                    .prd-name Eclipse Mekanik Kursun Kalem
+                    .piece-price
+                        span.type Gross
+                        i.lira ₺
+                        span.price 4,85
+                    form.uk-form
+                        fieldset
+                            .form-row
+                                .col-1
+                                    .title RENK
+                                .col-4
+                                    .select-color.dropdown(data-uk-drp="{'fnd':'.color-box', 'typ': 'html'}")
+                                        span Renk 
+                                        ul
+                                            li.selected
+                                                .color-box 
+                                                    span.color.cl-green
+                                                    span.name Yeşil
+                                            li 
+                                                .color-box
+                                                    span.color.cl-blue
+                                                    span.name Mavi
+                            .form-row
+                                .col-1
+                                    .title BİRİM
+                                .col-4
+                                    .select-gross.dropdown(data-uk-drp="{'fnd':'.holder', 'typ': 'html'}")
+                                        span Gross
+                                        ul
+                                            li
+                                                .holder
+                                                    .gross-box
+                                                        span.gross-wrp
+                                                            span.name Gross 
+                                                            span.piece 18 Adet
+                                                        span.price
+                                                            i.lira ₺
+                                                            |4,85
+                                            li
+                                                .holder
+                                                    .gross-box
+                                                        span.gross-wrp
+                                                            span.name Gross 
+                                                            span.piece 18 Adet
+                                                        span.price
+                                                            i.lira ₺
+                                                            |4,85
+
+                            .form-row
+                                .col-1
+                                    .title ADET
+                                .col-4
+                                    .col-75
+                                        .inp.inp-num
+                                            input(type="text" min="0" value="12").inp-piece
+                                    .col-25.uk-flex-center
+                                        .total-price 
+                                            span Toplam
+                                            span.price
+                                                i.lira ₺
+                                                span 34,85 
+                            .form-row
+                                button.uk-button.uk-button-primary.uk-width-1-1(type="submit") SEPETE EKLE
+                            
+                            
+                    .point-desc 
+                        b.m-r-5 !
+                        | Bu siparişten 
+                        i.lira ₺
+                        | 20 değerinde puan kazanacaksınız.
+                
+                .gift-prd-wrapper
+                    .title-wrp HEDİYE ÜRÜNLER
+                    .prd-list#gift-prd-list
+                        - for (var x = 0; x < 6; x++)
+                            .prd-item
+                                .prd-img
+                                    img(src='images/13.jpg')
+                                .prd-info
+                                    .prd-code EM346387
+                                    span.title Eclipse Mekanik Kursun Kalem
+                                    .prd-piece-price
+                                        .pp-item
+                                            span.name Adet
+                                            span.desc
+                                                i.lira ₺
+                                                span 0,85
+                                        .pp-item
+                                            span.name Gross
+                                            span.desc.line-through
+                                                i.lira ₺
+                                                span 13,49
+                                        .pp-item
+                                            span.name Fiyat
+                                            span.desc
+                                                i.lira ₺
+                                                span 0,0
+                    .more-wrp
+                        a.btn-more(href="javascript:void(0)" data-uk-toggle="{target:'#gift-prd-list', cls:'opened'}") + Daha Fazla Göster

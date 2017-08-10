@@ -1,0 +1,87 @@
+.reseller-application-wrapper{
+    .page-title{
+        display: block;
+        text-align: center;
+        padding: 34px 0 40px;
+        font-size: 20px;
+        color: $black;
+    }
+
+    .res-ap-wrp{
+        background: $white;
+        padding: 50px 0;
+        margin-bottom: 60px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.account-form-wrapper{
+    width:50%;
+    margin-top: 40px;
+    @include GothamBook;
+    font-size: 14px;
+    color: #444444;
+    .uk-form-row + .uk-form-row {
+        margin-top: 10px;
+    }
+    input, textarea{
+        border-radius: 3px;
+        padding: 10px 20px;
+    }
+    input,
+    textarea{
+        &::placeholder{
+            color: $white;
+        }
+        
+        &:focus{
+            &::placeholder{
+                color: #f5fbfe;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:960px){
+    .reseller-application-wrapper{
+        .page-title{
+            background: $white;
+            padding: 25px 0 30px;
+        }
+        .res-ap-wrp{
+            padding: 0 0 30px;
+            margin-bottom: 0;
+            .account-form-wrapper{
+                margin-top: 0;
+            }
+        }
+        .uk-button-primary{
+            margin-top: 25px !important;
+        }
+    }
+    .account-form-wrapper{
+        width:100%;
+        font-size: 0px;
+        .uk-width-1-3{
+            display: none;
+        }
+        .uk-width-2-3{
+            width: 100%;
+            margin: 0 20px;
+        }
+        .uk-form-row + .uk-form-row {
+            margin-top: 20px;
+        }
+        input, textarea{
+            border-radius: 5px;
+            background-color: #f4f7fa !important;
+            border: 1px solid #dadfe3;
+            font-size: 14px;
+        }
+        input::placeholder,
+        textarea::placeholder{
+            color: #0090f1;
+        }
+    }
+}

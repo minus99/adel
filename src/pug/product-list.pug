@@ -1,0 +1,159 @@
+doctype html
+
+html
+  
+  include template/head.pug
+  
+  body.ems-login
+    //Üye girişi yapılmışsa body'e ems-login classı atılması gerekiyor.
+    
+    include template/header.pug
+
+    //Banner
+    .page-banner-full
+        img(src="images/14.jpg")
+        .desc Kalem Grubu
+
+    .mobile-filter-wrp
+        .prd-list-filter-title
+            a(href="javascript:void(0)" data-uk-toggle="{target: '#mobi-filter-wrp', cls:'opened'}") Filtre
+
+    .prd-list
+        .prd-filter-wrp#mobi-filter-wrp
+            .header
+                .title
+                    span FİLTRE
+                    a.btn-close(href="javascript:void(0)" data-uk-toggle="{target: '#mobi-filter-wrp', cls:'opened'}"): i.icon-close
+                a.btn-clear(href="javascript:void(0)") SEÇİMİ TEMİZLE
+            .content
+                .prd-list-filter 
+                    .item-wrp
+                        .filter-item.opened#filter-001
+                            a.filter-name(data-uk-toggle="{target:'#filter-001', cls:'opened'}") 
+                                span KAĞIT GRUBU
+                                i.icon-plus
+                            ul
+                                li
+                                    a(href="javascript:void(0)") TÜM ÜRÜNLER
+                                li
+                                    a(href="javascript:void(0)") Defter
+                                li
+                                    a(href="javascript:void(0)") Fon Kartonu
+                                li
+                                    a(href="javascript:void(0)") Grapon
+                                li
+                                    a(href="javascript:void(0)") Karışık Set
+                                    
+                        .filter-item.opened#filter-002
+                            a.filter-name(data-uk-toggle="{target:'#filter-002', cls:'opened'}") 
+                                span MARKA
+                                i.icon-plus
+                            ul  
+                                - var marka_set = [ 'Adel', 'Adeland', 'Faber-Castell', 'OEM', 'Graf Von Faber-Castell' ];
+                                - for (var x = 0; x < 5; x++)
+                                    li
+                                        a.chk(href="javscript:void(0)")= marka_set[x]
+                        .filter-item#filter-003
+                            a.filter-name(data-uk-toggle="{target:'#filter-003', cls:'opened'}")
+                                span FİYAT
+                                i.icon-plus
+                        .filter-item#filter-004
+                            a.filter-name(data-uk-toggle="{target:'#filter-004', cls:'opened'}") 
+                                span RENK
+                                i.icon-plus
+                        .filter-item#filter-005
+                            a.filter-name(data-uk-toggle="{target:'#filter-005', cls:'opened'}") 
+                                span TİP
+                                i.icon-plus
+            .footer
+                a.btn-apply(href="javascript:void(0)" data-uk-toggle="{target: '#mobi-filter-wrp', cls:'opened'}") UYGULA
+
+        .prd-list-holder
+
+            .prd-list-ranking 
+                .list-grid
+                    ul
+                        li(data-rel="grid-four")
+                            a(href="javascript:void(0)")
+                                i.icon-grid-four
+                        li(data-rel="grid-list")
+                            a(href="javascript:void(0)")
+                                i.icon-grid-list
+                        li(data-rel="grid-two")
+                            a(href="javascript:void(0)")
+                                i.icon-grid-two
+                .list-ranking.dropdown
+                    span Sıralama 
+                    i.icon-arrow-down
+                    ul
+                        li 
+                            a(href="javascript:void(0)") Eski Siparişlerim
+                        li 
+                            a(href="javascript:void(0)") Katalog sırası
+                        li 
+                            a(href="javascript:void(0)") Fiyat Listesi sırası
+                        li 
+                            a(href="javascript:void(0)") Fiyat Artan
+                        li 
+                            a(href="javascript:void(0)") Fiyat Azalan
+                        li 
+                            a(href="javascript:void(0)") Yeniden Eskiye
+
+
+            .prd-list-wrp.grid-two
+                - var ico_set = [ 'ico-gift', '', 'ico-new', 'ico-discount', '', 'ico-discount-2' ];
+                - for (var x = 0; x < 10; x++)
+                    ul.item
+                        li.ico(class=ico_set[x])
+                        li.prd-img
+                            .big-image
+                                img(src='images/13.jpg')
+                            .ex-image
+                                div: img(src='images/15.jpg')
+                                div: img(src='images/16.jpg')
+                        li.prd-code EM346387
+                        li.prd-color 7 Renk
+                        li.prd-info
+                            .prd-code EM346387
+                            span.title Eclipse Mekanik Kursun Kalem
+                            .desc - Lorem ipsum dolor sit amet, conset <br>- Consectetur Sed do eiusmod tempor incididunt<br>- Ut labore et dolore magna aliqua.
+                        li.prd-piece-wrp
+                            .prd-price
+                                span.name Adet
+                                span.price
+                                    i.lira ₺
+                                    span 0,85
+                            .prd-price
+                                span.name Gross
+                                span.price
+                                    i.lira ₺
+                                    span 0,85
+                        li.prd-parcel
+                            .prd-clock
+                                i.icon-clock
+                                span 3 Koli
+                            .prd-cart-piece
+                                i.icon-cart
+                                span 2 Koli
+                        li.prd-btn
+                            a.uk-button-primary.add-basket(href="javascript:void(0)") EKLE
+                .pagination
+                    ul
+                        li.selected
+                            a(href="javascript:void(0)") 1
+                        li
+                            a(href="javascript:void(0)") 2
+                        li
+                            a(href="javascript:void(0)") 3
+                        li
+                            a(href="javascript:void(0)") 4
+                        li
+                            a(href="javascript:void(0)") 5
+                    .pag-count
+                        span.count 223
+                        span.text Ürün
+                    .btn-group
+                        a.btn-all-data(href="javascript:void(0)") Tümünü Göster
+    include template/footer.pug
+
+    include template/script.pug

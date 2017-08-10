@@ -1,0 +1,91 @@
+.new-product-cr-wrapper{
+    padding: 0 30px;
+    margin-bottom: 40px;
+    .prd-news-title{
+        margin: 35px 0 38px;
+        font-size: 18px;
+        color: $black;
+        text-transform: uppercase;
+    }
+    .new-product-cr{
+        .item{
+            margin-left: 4px;
+            padding: 20px;
+            background-color: $white;
+            border: solid 1px $grey-light;
+            position: relative;
+            .ico{
+                width: 26px;
+                position: absolute;
+                top:10px;
+                left: -5px;
+            }
+            .prd-img{
+                text-align: center;
+                border-bottom: 1px solid $grey-lighter;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+            }
+            .prd-info span{
+                @include GothamBook;
+                font-size: 12px;
+                line-height: 1.67;
+                color: $blue-dark;
+            }
+            .prd-title{
+                font-size: 14px;
+                color: $black;
+                margin-top: 7px;
+            }
+            .prd-price-wrapper{
+                margin-top: 25px;
+                .prd-price{
+                    width: 50%;
+                    > span{
+                        display: block;
+                        &.name{
+                            @include GothamBook;
+                            font-size: 12px;
+                            color: $black;
+                            line-height: 0.8;
+                        }
+                        &.price{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .uk-slidenav{
+        font-size: 25px;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        margin-top: 0;
+        transform: translateY(-50%);
+    }
+    &.uk-slidenav-position .uk-slidenav-previous{ left: 0 !important; }
+    &.uk-slidenav-position .uk-slidenav-next{ right: 0 !important; }
+    &.uk-slidenav-position .uk-slidenav{ display: block !important; }
+    .uk-slidenav-contrast { color: $blue; }
+    .uk-slidenav-contrast:hover, .uk-slidenav-contrast:focus{ color: $blue-dark; }
+}
+
+@media screen and (max-width:960px){
+    .new-product-cr-wrapper{
+        padding: 35px 0 0;
+        margin-top: 15px;
+        border-top: 1px solid $grey-light;
+        margin: 0 -25px 0 -5px;
+        .prd-news-title{
+            margin: 0 20px 38px;
+        }
+        .new-product-cr{
+            li{
+                width: calc( 258px) !important;
+            }
+        }
+        &.uk-slidenav-position .uk-slidenav{ display: none !important; }
+    }
+}

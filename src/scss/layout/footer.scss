@@ -1,0 +1,84 @@
+.adel-footer{
+    background-color: $white;
+    border-top: 1px solid $grey-light;
+    padding-top: 47px;
+    .footer-menu{
+        margin-bottom: 42px;
+        .title{ 
+            display: block;
+            font-size: 18px;
+            color: $black;
+            margin-bottom: 35px;
+        }
+        ul {
+            &.categories{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                flex-direction: column;
+                height: 200px;
+                li{
+                    width: 50%;
+                }
+            }
+            li{
+                display: block;
+                a{
+                    @include GothamBook;
+                    font-size: 14px;
+                    line-height: 2.14;
+                    color: $black;
+                }
+            }
+        }
+    }
+    .foter-bottom{
+        margin: 0 auto;
+        .social-media{
+            border-top:1px solid $grey-light;
+            padding: 50px 0 35px;
+            a{
+                font-size: 20px;
+                margin: 0 50px;
+            }
+        }
+        .copyright{
+            @include GothamBook;
+            font-size: 15px;
+            line-height: 2;
+            color: $grey;
+            margin-bottom: 70px;
+        }
+    }
+}
+
+@media screen and (max-width:960px){
+    .adel-footer{
+        .footer-menu{
+            margin-bottom:22px;
+            .title{
+                text-align: center;
+                margin-bottom: 25px;
+            }
+            ul {
+                display: none;
+                &.categories{
+                    display: none;
+                }
+            }
+        }
+        .foter-bottom{
+            .social-media{
+                justify-content: space-around;
+                padding: 40px 0 30px;
+                a{
+                    margin: 0 0;
+                }
+            }
+            .copyright{
+                font-size: 13px;
+                margin: 0 0 49px;
+            }
+        }
+    }
+}
