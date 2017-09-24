@@ -10,7 +10,7 @@ html
     include template/header.pug
 
     .uk-container.uk-container-center
-        .uk-flex.uk-flex-middle.uk-flex-center.m-t-40.m-b-40
+        .uk-flex.uk-flex-middle.uk-flex-center.uk-flex-wrap.m-t-40.m-b-40
 
             a.uk-button.uk-button-success.m-r-10(href='#login' data-uk-modal="{center:true}") Login
             include modal/login.pug 
@@ -18,11 +18,20 @@ html
             a.uk-button.uk-button-success.m-r-10(href='#dealer' data-uk-modal="{center:true}") Bayi Seçimi
             include modal/bayi-seciniz.pug 
 
+            a.uk-button.uk-button-success.m-r-10(href='#dealer-v2' data-uk-modal="{center:true}") Bayi Seçimi V2
+            include modal/bayi-seciniz-v2.pug 
+
             a.uk-button.uk-button-success.m-r-10(href='#adressSelection' data-uk-modal="{center:true}") Adres Seçimi
             include modal/adres.pug
 
-            a.uk-button.uk-button-success(href='#dealerChange' data-uk-modal="{center:true}") Bayi Değişikliği
+            a.uk-button.uk-button-success.m-r-10(href='#dealerChange' data-uk-modal="{center:true}") Bayi Değişikliği
             include modal/bayi-degisikligi.pug 
+
+            a.uk-button.uk-button-success.m-r-10(href='#stok-yetersiz' data-uk-modal="{center:true}") Stok Yetersiz
+            include modal/stok-yetersiz.pug
+
+            a.uk-button.uk-button-success(href='#success-add-basket' data-uk-modal="{center:true}") Sepete Eklendi
+            include modal/success-add-basket.pug
     
     include template/footer.pug
 

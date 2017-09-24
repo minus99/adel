@@ -52,22 +52,26 @@
                       <li><a href="javascript:void(0)">Kağıt Grubu</a></li>
                       <li><a href="javascript:void(0)">Ofis Grubu</a></li>
                       <li><a href="javascript:void(0)">Oyuncak</a>
-                        <ul> 
-                          <li><a href="javascript:void(0)">Tüm Markalar</a></li>
-                          <li> <a href="javascript:void(0)">Adel</a>
-                            <ul>
-                              <li><a href="javascript:void(0)">Tüm Ürünler</a></li>
-                              <li><a href="javascript:void(0)">Defter</a></li>
-                              <li><a href="javascript:void(0)">Fon Kartonu</a></li>
-                              <li><a href="javascript:void(0)">Grapon</a></li>
-                              <li><a href="javascript:void(0)">Karışık Set</a></li>
-                            </ul>
-                          </li>
-                          <li><a href="javascript:void(0)">Adeland</a></li>
-                          <li><a href="javascript:void(0)">Faber-Castell</a></li>
-                          <li><a href="javascript:void(0)">OEM</a></li>
-                          <li><a href="javascript:void(0)">Graf Von Faber-Castell</a></li>
-                        </ul>
+                        <div class="wrapper sv1">
+                          <ul> 
+                            <li><a href="javascript:void(0)">Tüm Markalar</a></li>
+                            <li> <a href="javascript:void(0)">Adel</a>
+                              <div class="wrapper sv2">
+                                <ul>
+                                  <li><a href="javascript:void(0)">Tüm Ürünler</a></li>
+                                  <li><a href="javascript:void(0)">Defter</a></li>
+                                  <li><a href="javascript:void(0)">Fon Kartonu</a></li>
+                                  <li><a href="javascript:void(0)">Grapon</a></li>
+                                  <li><a href="javascript:void(0)">Karışık Set</a></li>
+                                </ul>
+                              </div>
+                            </li>
+                            <li><a href="javascript:void(0)">Adeland</a></li>
+                            <li><a href="javascript:void(0)">Faber-Castell</a></li>
+                            <li><a href="javascript:void(0)">OEM</a></li>
+                            <li><a href="javascript:void(0)">Graf Von Faber-Castell</a></li>
+                          </ul>
+                        </div>
                       </li>
                       <li><a href="javascript:void(0)">Sanat Grubu</a></li>
                       <li><a href="javascript:void(0)">Teknik Grubu</a></li>
@@ -100,7 +104,7 @@
       </nav>
     </header>
     <div class="uk-container uk-container-center">
-      <div class="uk-flex uk-flex-middle uk-flex-center m-t-40 m-b-40"><a class="uk-button uk-button-success m-r-10" href="#login" data-uk-modal="{center:true}">Login</a>
+      <div class="uk-flex uk-flex-middle uk-flex-center uk-flex-wrap m-t-40 m-b-40"><a class="uk-button uk-button-success m-r-10" href="#login" data-uk-modal="{center:true}">Login</a>
         <div class="uk-modal ems-modal login-modal" id="login">
           <div class="uk-modal-dialog uk-modal-dialog-large"><a class="uk-modal-close uk-close"></a>
             <div class="modal-container">
@@ -152,6 +156,35 @@
               </ul>
             </div>
           </div>
+        </div><a class="uk-button uk-button-success m-r-10" href="#dealer-v2" data-uk-modal="{center:true}">Bayi Seçimi V2</a>
+        <div class="uk-modal ems-modal dealer-modal" id="dealer-v2">
+          <div class="uk-modal-dialog uk-modal-dialog-large"><a class="uk-modal-close uk-close"></a>
+            <div class="modal-header">
+              <div class="title">Bayi Seçiniz</div>
+            </div>
+            <div class="modal-container">
+              <div class="dealer-info"><i class="dealer-ico icon-store"></i></div>
+              <div class="uk-flex uk-flex-center">
+                <div class="dealer-search">
+                  <input class="dealerSearch" type="text" placeholder="Bayi ara"><a class="btn-search" href="javascript:void(0)"><i class="icon-arrow-right"></i></a>
+                </div>
+              </div>
+              <ul class="dealer-list">
+                <li class="selected">
+                  <div><span class="title">BATI KIRTASİYE BİLG.SAN.LTD.ŞTİ.</span><span class="location">Ümraniye, İstanbul</span></div>
+                  <div><a class="btn-select" href="javascript:void(0)">SEÇ</a></div>
+                </li>
+                <li>
+                  <div><span class="title">BATI KIRTASİYE BİLG.SAN.LTD.ŞTİ.</span><span class="location">Ümraniye, İstanbul</span></div>
+                  <div><a class="btn-select" href="javascript:void(0)">SEÇ</a></div>
+                </li>
+                <li>
+                  <div><span class="title">BATI KIRTASİYE BİLG.SAN.LTD.ŞTİ.</span><span class="location">Ümraniye, İstanbul</span></div>
+                  <div><a class="btn-select" href="javascript:void(0)">SEÇ</a></div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div><a class="uk-button uk-button-success m-r-10" href="#adressSelection" data-uk-modal="{center:true}">Adres Seçimi</a>
         <div class="uk-modal ems-modal order-address-modal" id="adressSelection">
           <div class="uk-modal-dialog uk-modal-dialog-large"><a class="uk-modal-close uk-close"></a>
@@ -174,7 +207,7 @@
               </ul>
             </div>
           </div>
-        </div><a class="uk-button uk-button-success" href="#dealerChange" data-uk-modal="{center:true}">Bayi Değişikliği</a>
+        </div><a class="uk-button uk-button-success m-r-10" href="#dealerChange" data-uk-modal="{center:true}">Bayi Değişikliği</a>
         <div class="uk-modal ems-modal dealer-change-modal" id="dealerChange">
           <div class="uk-modal-dialog uk-modal-dialog-large"><a class="uk-modal-close uk-close"></a>
             <div class="modal-header">
@@ -230,6 +263,32 @@
                 </li>
               </ul>
               <div class="go-on"><a class="uk-button-primary btn-confirm" href="javascript:void(0)">ONAYLA</a></div>
+            </div>
+          </div>
+        </div><a class="uk-button uk-button-success m-r-10" href="#stok-yetersiz" data-uk-modal="{center:true}">Stok Yetersiz</a>
+        <div class="uk-modal ems-modal info-msg-modal" id="stok-yetersiz">
+          <div class="uk-modal-dialog uk-modal-dialog-medium"><a class="uk-modal-close uk-close"></a>
+            <div class="modal-container">
+              <div class="info-msg-container">
+                <div class="status-msg">
+                  <div class="msg-icon"><img src="images/icons/alert-danger.svg"></div>
+                  <div class="msg-text">Stok Yetersiz</div>
+                </div>
+                <div class="btn-holder"><a class="uk-button-secondary">ALIŞVERİŞE DEVAM ET</a></div>
+              </div>
+            </div>
+          </div>
+        </div><a class="uk-button uk-button-success" href="#success-add-basket" data-uk-modal="{center:true}">Sepete Eklendi</a>
+        <div class="uk-modal ems-modal info-msg-modal" id="success-add-basket">
+          <div class="uk-modal-dialog uk-modal-dialog-medium"><a class="uk-modal-close uk-close"></a>
+            <div class="modal-container">
+              <div class="info-msg-container">
+                <div class="status-msg">
+                  <div class="msg-icon"><img src="images/icons/alert-success.svg"></div>
+                  <div class="msg-text">Ürün sepete eklendi</div>
+                </div>
+                <div class="btn-holder"><a class="continue-shopping">ALIŞVERİŞE DEVAM ET</a><a class="uk-button-secondary">SEPETE GİT</a></div>
+              </div>
             </div>
           </div>
         </div>

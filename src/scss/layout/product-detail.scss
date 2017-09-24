@@ -475,13 +475,16 @@
         width: calc(100% - 60px);
         max-width: initial;
         border-bottom: 1px solid #dadfe3;
-        margin: 0 30px;
+        padding: 0 30px;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 22px;
         line-height: 1.05;
         color: #0067a5;
+        background: #fff;
+        z-index: 10;
+        position: absolute; 
         a.close-btn {
             position: absolute;
             right: 0;

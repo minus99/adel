@@ -92,7 +92,9 @@ module.exports = function(grunt) {
           'dist/basket.html': ['src/pug/basket.pug'],
           'dist/basket-2.html': ['src/pug/basket-2.pug'],
           'dist/basket-3.html': ['src/pug/basket-3.pug'],
-          'dist/basket-4.html': ['src/pug/basket-4.pug']
+          'dist/basket-4.html': ['src/pug/basket-4.pug'],
+          'dist/search-results.html': ['src/pug/search-results.pug'],
+          'dist/corporate.html': ['src/pug/corporate.pug']
         }
       }
     },

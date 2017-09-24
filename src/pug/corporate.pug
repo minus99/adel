@@ -1,0 +1,62 @@
+doctype html
+
+html
+  
+  include template/head.pug
+  
+  body.ems-login
+    //Üye girişi yapılmışsa body'e ems-login classı atılması gerekiyor.
+    
+    include template/header.pug
+
+    //Banner
+    .page-banner-full
+        img(src="images/14.jpg")
+        .desc Hakkımızda
+
+    .page-corparate
+        .left-menu-holder
+            .corporate-menu.dropdown
+                span Hakkımızda
+                .corparate-title Hakkımızda
+                ul
+                    li
+                        a(href="javascript:void(0)")
+                            span Hakkımızda
+                    li
+                        a(href="javascript:void(0)")
+                            span İnsan Kaynakları
+                    li
+                        a(href="javascript:void(0)")
+                            span Gizlilik Politikası
+                    li
+                        a(href="javascript:void(0)") 
+                            span İletişim
+        .corporate-container
+            .content-area
+                .text-holder
+                    span.title-big Lorem ipsum dolor sit amet
+                    .text The $79 iWork ’08 appears to be a good deal for anyone needing an affordable office suite for the Mac. Apple has finally added a spreadsheet application. At first glance, Numbers is an elegant no-brainer for anyone migrating from Microsoft Excel. In the past, many Mac aficionados bought Microsoft Excel because iWork lacked a spreadsheet application. However, with the addition of Numbers and the release of Microsoft’s Office for Mac 2008 delayed until January, Mac users may stick to Apple’s less expensive option. We’re also happy that Mac hasn’t changed its file formats as Microsoft did with Office 2007. We like the sparse interfaces throughout the iWork package. Its features aren’t as deep or rich as in Microsoft Office 2007, but iWork also hasn’t changed radically from its last incarnation, unlike Office. iWork also covers much more than just the basic productivity tasks offered by online tools like Google Docs & Spreadsheets or the Zoho suite, so it should be adequate for the vast majority of home and small-business users. System requirements, thankfully, are gentle to users of older Macs. You’ll need an Intel, PowerPC G5 or G4 machine with a 500MHz or better processor in addition to 512MB of RAM minimum, running OS X10.4.10. Pages Apple tore a page out of Microsoft Office’s book by creating a Contextual Format Bar that displays different features according to your task at hand. Select text, and the bar shows font options. Click on a picture, and the bar displays image-editing features. Unlike the contextual formatting Ribbon interface within Microsoft Word 2007, however, Pages offers no live previews of font and image changes as you hover over them. Pages ’08 also adds Change Tracking, similar to the Track Changes feature adopted many years ago by Microsoft Word. We’re glad that 
+            .content-area
+                .text-holder
+                    span.title-medium Lorem ipsum dolor sit amet
+                    .text The $79 iWork ’08 appears to be a good deal for anyone needing an affordable office suite for the Mac. Apple has finally added a spreadsheet application. At first glance, Numbers is an elegant no-brainer for anyone migrating from Microsoft Excel. In the past, many Mac aficionados bought Microsoft Excel because iWork lacked a spreadsheet application. However, with the addition of Numbers and the release of Microsoft’s Office for Mac 2008 delayed until January, Mac users may stick to Apple’s less expensive option. We’re also happy that Mac hasn’t changed its file formats as Microsoft did with Office 2007. 
+            .content-area
+                .image-holder
+                    img(src="http://lorempixel.com/output/abstract-q-c-470-340-3.jpg")
+                .text-holder
+                    span.title-medium Lorem ipsum dolor sit amet
+                    .text The $79 iWork ’08 appears to be a good deal for anyone needing an affordable office suite for the Mac. Apple has finally added a spreadsheet application. At first glance, Numbers is an elegant no-brainer for anyone migrating from Microsoft Excel. In the past, many Mac aficionados bought.
+            .content-area.rtl
+                .image-holder
+                    img(src="http://lorempixel.com/output/abstract-q-c-470-340-3.jpg")
+                .text-holder
+                    span.title-medium Lorem ipsum dolor sit amet
+                    .text The $79 iWork ’08 appears to be a good deal for anyone needing an affordable office suite for the Mac. Apple has finally added a spreadsheet application. At first glance, Numbers is an elegant no-brainer for anyone migrating from Microsoft Excel. In the past, many Mac aficionados bought.
+            .content-area
+                .text-holder
+                    .text The $79 iWork ’08 appears to be a good deal for anyone needing an affordable office suite for the Mac. Apple has finally added a spreadsheet application. At first glance, Numbers is an elegant no-brainer for anyone migrating from Microsoft Excel. In the past, many Mac aficionados bought Microsoft Excel because iWork lacked a spreadsheet application. However, with the addition of Numbers and the release of Microsoft’s Office for Mac 2008 delayed until January, Mac users may stick to Apple’s less expensive option. We’re also happy that Mac hasn’t changed its file formats as Microsoft did with Office 2007. 
+    
+    include template/footer.pug
+
+    include template/script.pug

@@ -431,8 +431,18 @@ b,c,d){return c-jQuery.easing.easeOutBounce(x,d-t,0,c,d)+b},easeOutBounce:functi
 						overlayControls: function( k ){
 							var _t = this;
 							if( o.overlay ){
-								if( k == 'opened' ) bdy.addClass( o.bdyCls );
+								/*if( k == 'opened' ) bdy.addClass( o.bdyCls );
 								else{ 
+									var e = el.find( o.items + '.' + o.customClass );
+									if( !_t.detectEl( e ) ) 
+										bdy.removeClass( o.bdyCls );
+								}*/
+								if( k == 'opened' ){
+									if( _t.detectEl( el.find( '> ul > li.' + o.customClass ).find( o.controls ) ) )
+										bdy.addClass( o.bdyCls );
+									else
+										bdy.removeClass( o.bdyCls );	
+								}else{ 
 									var e = el.find( o.items + '.' + o.customClass );
 									if( !_t.detectEl( e ) ) 
 										bdy.removeClass( o.bdyCls );

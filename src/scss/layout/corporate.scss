@@ -1,0 +1,208 @@
+.page-corparate{
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.left-menu-holder{
+    width: 20%;
+    padding: 0 30px 20px;
+    .corporate-menu{
+        .corparate-title{
+            display: block;
+            text-transform: uppercase;
+            font-family: Helvetica;
+            font-size: 14px;
+            line-height: 2.14;
+            color: $blue;
+            & + ul{
+                margin-bottom: 10px;
+            }
+        }
+        > span{
+            display: none;
+            height: 60px;
+            background: #0067a5;
+            padding: 0 20px;
+            font-size: 16px;
+            color: #fff;
+        }
+        ul{
+            li{
+                a{
+                    @include Gotham;
+                    font-size: 14px;
+                    line-height: 2.14;
+                    color: $black;
+                    font-weight: 400;
+                }
+                &.selected{
+                    a{
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+.corporate-container{
+    width: 70%;
+    padding: 58px 50px;
+    background-color: $white;
+    border: solid 1px $grey-light;
+}
+
+.content-area{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    .image-holder{
+        width: 44.8%;
+        margin-right: 40px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .text-holder{
+        display: block;
+        flex: 1;
+        .title-big{
+            display: block;
+            font-family: Helvetica;
+            font-size: 28px;
+            color: #0067a5;
+            margin-bottom: 17px;
+        }
+        .title-medium{
+            display: block;
+            font-family: Helvetica;
+            font-size: 20px;
+            color: #0067a5;
+            margin-bottom: 10px;
+        }
+        .text{
+            @include GothamBook;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.56;
+            color: #444444;
+        }
+    }
+    &.rtl{
+        direction: rtl;
+        .image-holder{
+            margin-right: 0;
+            margin-left: 40px;
+        }
+        .text-holder{
+            direction: ltr;
+        }
+    }
+}
+
+
+@media screen and (max-width:960px){
+    .page-corparate{
+        display: block;
+        margin-top: 0px;
+        margin-bottom: 35px;
+    }
+
+    .left-menu-holder{
+        width: 100%;
+        padding: 0;
+        .corporate-menu{
+            position: relative;
+            .corparate-title{
+                font-family: Helvetica;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 1;
+                text-transform: inherit;
+                color: $black;
+                background: $white;
+                margin-bottom: 35px;
+                padding: 32px 20px 27px;
+                border-bottom: 1px solid #dadfe3;
+            }
+            > span{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+                z-index: 1;
+                text-transform: uppercase;
+                &:after{
+                    content: '\e815';
+                    font-family: "fontello";
+                    font-style: normal;
+                    font-size: 9px;
+                }
+            }
+            ul{
+                width: 100%;
+                position: absolute;
+                top: -100%;
+                
+                visibility: hidden;
+                opacity: 0;
+                height: 0;
+                overflow: hidden;
+                background: $white;
+                transition: all 0.2s cubic-bezier(0.8, 0, 0.5, 1);
+                box-shadow: 0px 1px 1px $body;
+                li{
+                    width: 100%;
+                    padding: 15px 20px;
+                    border-bottom: 1px solid $grey-light;
+                }
+            }
+            &.opened{
+                ul{
+                    visibility: visible;
+                    opacity: 1;
+                    height: auto;
+                    overflow: auto;
+                    top: 60px;
+                }
+            }
+        }
+    }
+
+    
+
+    .corporate-container{
+        width: 100%;
+        background: none;
+        border: none;
+        padding: 0 20px;
+    }
+
+    .content-area{
+        display: block;
+        margin-bottom: 50px;
+        .image-holder{
+            width: calc(100% + 40px);
+            margin-right: 0px;
+            margin-left: -20px;
+            margin-top: 0px;
+            margin-bottom: 35px;
+            img{
+                width: 100%;
+            }
+        }
+        .text-holder{
+            display: block;
+            flex: 1;
+        }
+        &.rtl{
+            direction: ltr;
+            .image-holder{
+                margin-right: 0;
+                margin-left: -20px;
+            }
+        }
+    }
+}

@@ -101,6 +101,21 @@
                         }
                     }
                 }
+                .filter-price{
+                    display: flex;
+                    justify-content: space-between;
+                    li {
+                        width: calc(50% - 10px);
+                        input{
+                            width: 100%;
+                            border: 1px solid #99b9cc;
+                            border-radius: 3px;
+                            background: $body;
+                            padding: 0 10px !important;
+                            height: 33px !important;
+                        }
+                    }
+                }
             }
 
         }
@@ -112,7 +127,8 @@
     .prd-list-holder{
         flex: 1;
         .prd-list-ranking{
-            display: block;
+            display: flex;
+            justify-content: space-between;
             height: 60px;
             border: 1px solid $grey-light;
             .list-grid{
@@ -135,8 +151,12 @@
                     }
                 }
             }
+            .search-info-title{
+                height: 100%;
+                display: flex;
+                align-items: center;
+            }
             .list-ranking{
-                float: right;
                 width:237px; 
                 height: 100%;
                 position: relative;

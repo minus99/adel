@@ -337,15 +337,63 @@
     }
 }
 
+
+//.info-message-modal
+.info-msg-modal{
+    .info-msg-container{
+        margin: 40px 0 30px;
+        .status-msg{
+            text-align: center;
+            .msg-icon{
+                display: inline-block;
+                margin: 0 auto 20px;
+            }
+            .msg-text{
+                display: block;
+                text-align: center;
+                font-family: Helvetica;
+                font-size: 30px;
+                font-weight: 400;
+                color: $blue;
+            }
+        }
+        .btn-holder{
+            display: block;
+            text-align: center;
+            margin-top: 40px;
+            a{
+                display: inline-block;
+                font-size: 14px;
+                font-weight: 400;
+                padding: 13px 0;
+                border-radius: 5px;
+                padding-left: 30px;
+                padding-right: 30px;
+                margin: 10px 15px;
+                &.continue-shopping{
+                    background-color: $grey-dark;
+                    color: $white;
+                    &:hover{
+                        background-color: tint( $grey-dark, 10% );
+                    }
+                }
+            }
+        }
+    }
+}
+
+
 @media screen and (max-width:960px){
     .ems-modal{
+        overflow: hidden;
+        height: 100vh;
         > div{
             width: 100%;
             max-width: 100%; 
             margin: 0;
             padding: 0;
             top: 0 !important;
-            min-height: 100vh;
+            height: 100vh;
         }
         .uk-modal-close{
             position: inherit;
