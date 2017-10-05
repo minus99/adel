@@ -80,6 +80,8 @@ html
                                         span= item
                                     .order-row#order-row-001
                                         .order-product
+                                            a.del(href="javascript:void(0)")
+                                                i.icon-close
                                             .img
                                                 img(src="images/05.jpg")
                                             .title-gr
@@ -95,6 +97,7 @@ html
                                                         |78,99
                                             a.sub-btn(data-uk-toggle="{target:'#order-row-001', cls:'opened'}")
                                                 i
+                                            a(href="javascript:void(0)").oiLink 
 
                                         .order-piece-price
                                             span.price 
@@ -120,6 +123,8 @@ html
 
                                     .order-row#order-row-002
                                         .order-product
+                                            a.del(href="javascript:void(0)")
+                                                i.icon-close
                                             .img
                                                 img(src="images/05.jpg")
                                             .title-gr
@@ -135,6 +140,7 @@ html
                                                         |78,99
                                             a.sub-btn(data-uk-toggle="{target:'#order-row-002', cls:'opened'}")
                                                 i
+                                            a(href="javascript:void(0)").oiLink
 
                                         .order-piece-price
                                             span.price 
@@ -158,6 +164,8 @@ html
                                                 |78,99
                                     .order-row#order-row-003
                                         .order-product
+                                            a.del(href="javascript:void(0)")
+                                                i.icon-close
                                             .img
                                                 img(src="images/05.jpg")
                                             .title-gr
@@ -173,6 +181,7 @@ html
                                                         |78,99
                                             a.sub-btn(data-uk-toggle="{target:'#order-row-003', cls:'opened'}")
                                                 i
+                                            a(href="javascript:void(0)").oiLink 
 
                                         .order-piece-price
                                             span.price 
@@ -229,12 +238,15 @@ html
                             a.uk-button-primary.button-submit(href="javascript:void(0)") SİPARİŞİ ONAYLA
                         
                         li.export
+                            a.clear-basket(href="javascript:void(0)") 
+                                i.icon-trash-can
+                                span Sepeti Boşalt
                             a.to-mail(href="javascript:void(0)") 
                                 i.icon-mail
-                                | MAİL GÖNDER
+                                span Mail Gönder
                             a.to-print(href="javascript:void(0)") 
                                 i.icon-print
-                                | ÇIKTI AL
+                                span Çıktı Al
 
     include template/script.pug
     

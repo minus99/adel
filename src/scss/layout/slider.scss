@@ -13,6 +13,9 @@
             font-size:18px;
             margin:0 0 40px;
         }
+        .btn-detail{
+            color: #07D;
+        }
     }
 
     .banner-box{
@@ -30,6 +33,7 @@
     .banner-box .banner-item img{
         height: 100%;
     }
+    .banner-box .banner-item > a{ display: flex; width: 100%; }
     .banner-box .title{ 
         @include Gotham;
         font-size: 28px;
@@ -43,6 +47,7 @@
     }
     .banner-box .btn-detail{
         margin-top:15px;
+        color: #07D;
     } 
 
     .main-slider{
@@ -84,7 +89,12 @@
             top: inherit;
             height: 300px;
         }
-        .uk-slideshow li > img{
+        .uk-slideshow li > a{
+            width: 100%;
+            display: inline-block;
+        }
+        .uk-slideshow li > a> img{
+            width: 100%;
             height: 300px !important;
             margin-bottom: 36px;
         }

@@ -14,7 +14,7 @@ body.uk-navbar-nav-opened:before{
 
 .adel-header{
     position: relative;
-    z-index: 20;
+    z-index: 200;
     .header-top{
         background-color: $blue;
         padding: 7px 0 8px; 
@@ -138,6 +138,7 @@ body.uk-navbar-nav-opened:before{
                     background: $white;
                     padding: 0;
                     margin-top: 1px;
+                    display: block;
                     li{
                         a{
                             display: block;
@@ -163,6 +164,7 @@ body.uk-navbar-nav-opened:before{
                         .wrapper{
                             border-right: 1px solid $grey-light;
                             position: absolute;
+                            display: none;
                             &.sv1{
                                 left: 33.4%;
                                 top: 0px;
@@ -187,7 +189,7 @@ body.uk-navbar-nav-opened:before{
                             }
                         }
                         &.selected{
-                            > .wrapper > ul{
+                            > .wrapper{
                                 display: block;
                             }
                         }
@@ -328,7 +330,7 @@ body.uk-navbar-nav-opened:before{
             border-radius: 0 0 5px 5px;
             padding-left: 10px;
             .search-sugg-list{
-                max-height: 41ba0px;
+                max-height: 410px;
                 overflow-y: auto;
                 .search-item-group{
                     .title{ display: none; }
@@ -404,7 +406,7 @@ body.uk-navbar-nav-opened:before{
             &.mobi-menu-animate{
                 .adel-header .menu-wrapper{
                     position: fixed;
-                    z-index: 2;
+                    z-index: 200;
                     background-color: $white;
                     top: 0px;
                     right: 0px;
@@ -581,6 +583,17 @@ body.uk-navbar-nav-opened:before{
                                                         }
                                                     }
                                                 }
+                                            }
+                                            .wrapper{
+                                                border-right: 0px solid $grey-light;
+                                                position: initial;
+                                                &.sv1{
+                                                    width: 100%;
+                                                }
+                                                &.sv2{
+                                                    width: 100%; 
+                                                }
+                                                ul{ width: 100%; }
                                             }
                                             a{
                                                 padding: 0 30px;

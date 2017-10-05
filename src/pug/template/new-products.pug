@@ -5,24 +5,25 @@
             - var ico_set = [ 'ico-gift', '', 'ico-new', 'ico-discount', 'ico-discount-2' ];
             - for (var x = 0; x < 6; x++)
                 li
-                    .item
-                        i.ico(class=ico_set[x]) 
-                        .prd-img
-                            img(src="images/05.jpg")
-                        .prd-info.uk-flex.uk-flex-space-between
-                            span EM346387
-                            span 7 Renk
-                        .prd-title Eclipse Mekanik Kurşun Kalem
-                        .uk-flex.prd-price-wrapper
-                            .prd-price
-                                span.name Adet
-                                span.price 
-                                    i.lira ₺
-                                    span 0,85
-                            .prd-price
-                                span.name Gross
-                                span.price
-                                    i.lira ₺
-                                    span 13,49
+                    a(href="javascript:void(0)")
+                        .item
+                            i.ico(class=ico_set[x]) 
+                            .prd-img
+                                img(src="images/05.jpg")
+                            .prd-info.uk-flex.uk-flex-space-between
+                                span EM346387
+                                span 7 Renk
+                            .prd-title Eclipse Mekanik Kurşun Kalem
+                            .uk-flex.prd-price-wrapper
+                                .prd-price
+                                    span.name Adet
+                                    span.price 
+                                        i.lira ₺
+                                        span 0,85
+                                .prd-price
+                                    span.name Gross
+                                    span.price
+                                        i.lira ₺
+                                        span 13,49
         a.uk-slidenav.uk-slidenav-contrast.uk-slidenav-previous(data-uk-slider-item="previous") 
         a.uk-slidenav.uk-slidenav-contrast.uk-slidenav-next(data-uk-slider-item="next")

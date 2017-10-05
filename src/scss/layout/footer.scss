@@ -10,6 +10,9 @@
             color: $black;
             margin-bottom: 35px;
         }
+        .m-title{
+            display: none;
+        }
         ul {
             &.categories{
                 display: flex;
@@ -56,15 +59,35 @@
     .adel-footer{
         .footer-menu{
             margin-bottom:22px;
+            transition: all 0.2s cubic-bezier(0.8, 0, 0.5, 1);
             .title{
+                display: none;
+            }
+            .m-title{
                 text-align: center;
                 margin-bottom: 25px;
+                display: block;
+                font-size: 18px;
+                color: $black;
+                margin-bottom: 35px;
             }
             ul {
                 display: none;
+                text-align: center;
                 &.categories{
                     display: none;
+                    height: auto;
+                    li{
+                        width:100%;
+                    }
                 }
+                &.opened{
+                    display: block;
+                }
+            }
+            .m-title + ul{
+                margin-top: -10px;
+                margin-bottom: 30px;
             }
         }
         .foter-bottom{

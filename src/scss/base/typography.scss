@@ -5,3 +5,9 @@
 // GOTHAM BOOK
 @include font-face("GothamBook", "../fonts/Gotham/Gotham-Book");
 @mixin GothamBook {  font-family: 'GothamBook'; font-weight: 300; }
+
+// HELVATICA NUE
+
+
+@include font-face("HelvaticaNue-Light", "../fonts/HelvaticaNue/HelveticaNeue-Light");
+@mixin HelvaticaNue-Light {  font-family: 'HelvaticaNue-Light'; font-weight: 400; }

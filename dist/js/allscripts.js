@@ -537,3 +537,11 @@ var bdy = $('body'),
 	};
 	
 	initialize();
+
+
+// basket-suggestion Modal show - Slide init
+$('.basket-suggestion').on({
+	'show.uk.modal': function(){
+		$(window).resize()
+	}
+});

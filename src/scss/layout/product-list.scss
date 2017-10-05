@@ -240,7 +240,6 @@
     align-items: center;
     padding: 30px 0;
     ul{
-        flex: 1;
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -264,7 +263,6 @@
         }
     }
     .btn-group{
-        flex: 1;
         text-align: right;
         .btn-all-data{
             font-size: 16px;
@@ -873,9 +871,22 @@
                     border: 0;
                 }
                 li{
-                    &.prd-img, &.prd-parcel{ width: 35%; }
+                    &.prd-img{ width: 35%; }
                     &.prd-info, &.prd-piece-wrp{ width: 43%; }
                     &.prd-color, &.prd-btn{ width: 22%; }
+                    &.prd-piece-wrp{ width: 78%; }
+
+                    &.prd-info{
+                        .prd-code{
+                            @include Gotham;
+                            font-size: 12px;
+                            line-height: 1.92;
+                            color: $blue-dark;
+                        }
+                        > a{
+                            color: $black;
+                        }
+                    }
 
                     &.ico, &.prd-code{
                         display: none;
@@ -889,6 +900,7 @@
                         margin-bottom: 0;
                         .big-image{
                             text-align: center;
+                            height: 100%;
                             img{
                                 height: 100%;
                             }
@@ -941,6 +953,8 @@
                         order:4;
                         display: flex;
                         align-items: flex-end;
+                        ///////////////
+                        display: none;
                         > div{
                             font-size: 12px;
                             color: $black;

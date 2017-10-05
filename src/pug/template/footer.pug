@@ -7,7 +7,9 @@ footer.adel-footer
         .footer-menu.uk-grid
           .uk-width-1-1.uk-width-large-2-4
             span.title Kategoriler
-            ul.categories
+            span.m-title(data-uk-toggle="{target: '#fmC-01', cls:'opened'}") Kategoriler
+            
+            ul.categories#fmC-01
               li  
                 a(href="javascript:void(0)") Tüm Ürün Grupları
               li
@@ -34,7 +36,8 @@ footer.adel-footer
                 a(href="javascript:void(0)") Yazım Grubu
           .uk-width-1-1.uk-width-large-1-4
             span.title Markalar
-            ul
+            span.m-title(data-uk-toggle="{target:'#fmC-02', cls:'opened'}") Markalar
+            ul#fmC-02
               li  
                 a(href="javascript:void(0)") Tüm Markalar
               li
@@ -49,7 +52,8 @@ footer.adel-footer
                 a(href="javascript:void(0)") Graf Von Faber-Castell
           .uk-width-1-1.uk-width-large-1-4
             span.title Hakkımızda
-            ul
+            span.m-title(data-uk-toggle="{target:'#fmC-03', cls:'opened'}") Hakkımızda
+            ul#fmC-03
               li  
                 a(href="javascript:void(0)") Hakkımızda
               li

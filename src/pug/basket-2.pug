@@ -81,6 +81,8 @@ html
                                         span= item
                                     .order-row#order-row-001
                                         .order-product
+                                            a.del(href="javascript:void(0)")
+                                                i.icon-close
                                             .img
                                                 img(src="images/05.jpg")
                                             .title-gr
@@ -121,6 +123,8 @@ html
 
                                     .order-row#order-row-002
                                         .order-product
+                                            a.del(href="javascript:void(0)")
+                                                i.icon-close
                                             .img
                                                 img(src="images/05.jpg")
                                             .title-gr
@@ -159,6 +163,8 @@ html
                                                 |78,99
                                     .order-row#order-row-003
                                         .order-product
+                                            a.del(href="javascript:void(0)")
+                                                i.icon-close
                                             .img
                                                 img(src="images/05.jpg")
                                             .title-gr
@@ -235,12 +241,15 @@ html
                             a.uk-button-primary.button-submit(href="javascript:void(0)") SİPARİŞİ ONAYLA
                         
                         li.export
+                            a.clear-basket(href="javascript:void(0)") 
+                                i.icon-trash-can
+                                span Sepeti Boşalt
                             a.to-mail(href="javascript:void(0)") 
                                 i.icon-mail
-                                | MAİL GÖNDER
+                                span Mail Gönder
                             a.to-print(href="javascript:void(0)") 
                                 i.icon-print
-                                | ÇIKTI AL
+                                span Çıktı Al
 
     include template/script.pug
     

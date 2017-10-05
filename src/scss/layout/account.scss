@@ -33,6 +33,12 @@
                             line-height: 2.14;
                             color: $black;
                         }
+                        &.logout{
+                            margin-top: 15px;
+                            a{
+                                color: $red;    
+                            }
+                        }
                     }
                 }
             }
@@ -169,6 +175,11 @@
                         position: relative;
                         z-index: 1;
                         text-transform: uppercase;
+
+                        @include HelvaticaNue-Light;
+                        font-size: 16px;
+                        letter-spacing: 1.2px;
+                        
                         &:after{
                             content: '\e815';
                             font-family: "fontello";
@@ -185,13 +196,34 @@
                         opacity: 0;
                         height: 0;
                         overflow: hidden;
-                        background: $white;
+                        background: $blue;
                         transition: all 0.2s cubic-bezier(0.8, 0, 0.5, 1);
                         box-shadow: 0px 1px 1px $body;
                         li{
                             width: 100%;
-                            padding: 15px 20px;
-                            border-bottom: 1px solid $grey-light;
+                            padding: 0px 20px;
+                            margin-bottom: 20px;
+                            /*border-bottom: 1px solid $grey-light;*/
+                            a{
+                                @include HelvaticaNue-Light;
+                                color: $white;
+                                line-height: initial;
+                                text-transform: uppercase;
+                                letter-spacing: 1.2px;
+                            }
+                            &.logout{
+                                padding: 15px 20px 15px;
+                                a{
+                                    display: inline-block;
+                                    width: 100%;
+                                    border-radius: 5px;
+                                    text-align: center;
+                                    text-transform: uppercase;
+                                    background: $white;
+                                    color: $blue;
+                                    padding: 12px 0 13px;
+                                }
+                            }
                         }
                     }
                     &.opened{

@@ -1,4 +1,5 @@
 
+.icon-cancel-oval:before { content: '\e800'; } /* '' */
 .icon-grid-two:before { content: '\e802'; } /* '' */
 .icon-account:before { content: '\e803'; } /* '' */
 .icon-instagram:before { content: '\e804'; } /* '' */
@@ -20,6 +21,7 @@
 .icon-cart:before { content: '\e817'; } /* '' */
 .icon-cart-2:before { content: '\e819'; } /* '' */
 .icon-close:before { content: '\e81a'; } /* '' */
+.icon-trash-can:before { content: '\e81b'; } /* '' */
 .icon-facebook:before { content: '\e81c'; } /* '' */
 .icon-clock:before { content: '\e81d'; } /* '' */
 .icon-grid-four:before { content: '\e81e'; } /* '' */

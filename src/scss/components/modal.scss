@@ -382,6 +382,16 @@
     }
 }
 
+// Sepete eklemek ister misiniz
+.basket-suggestion{
+    .opportunity-product-wrapper{
+        margin-top: 0px;
+        .prd-img{
+            display: block;
+        }
+    }
+}
+
 
 @media screen and (max-width:960px){
     .ems-modal{
@@ -554,6 +564,13 @@
         }
         .go-on{
             display: none;
+        }
+    }
+
+    // Sepete eklemek ister misiniz
+    .basket-suggestion{
+        .opportunity-product-wrapper{
+            display: block;
         }
     }
 }
