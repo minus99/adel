@@ -7,7 +7,12 @@
 @mixin GothamBook {  font-family: 'GothamBook'; font-weight: 300; }
 
 // HELVATICA NUE
-
+@include font-face("HelvaticaNue-Light", "../fonts/HelvaticaNue/HelveticaNeue-Light");
+@mixin HelvaticaNue-Light {  font-family: 'HelvaticaNue-Light'; font-weight: 400; }
 
 @include font-face("HelvaticaNue-Light", "../fonts/HelvaticaNue/HelveticaNeue-Light");
 @mixin HelvaticaNue-Light {  font-family: 'HelvaticaNue-Light'; font-weight: 400; }
+
+
+//Fontello
+@include font-face('fontello', '../fonts/fontello/fontello');

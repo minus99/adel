@@ -21,14 +21,48 @@
     .uk-width-1-1.uk-width-large-1-3
         .banner-box
             .banner-item.uk-slidenav-position
-                a(href="javascript:void(0)")
-                    img(src="images/03.jpg")
-                a(href="javascript:void(0)").uk-overlay-panel.uk-flex.uk-flex-center.uk-flex-middle.uk-flex-wrap.uk-flex-wrap-middle.banner-holder
+                img(src="images/03.jpg")
+                .uk-overlay-panel.uk-flex.uk-flex-center.uk-flex-middle.uk-flex-wrap.uk-flex-wrap-middle.banner-holder
                     span.uk-text-center.uk-width-1-1.title Fiyat Listesi
-                    span.btn-detail İncele
+                    .cat-options#price-list
+                        span(data-uk-toggle="{target:'#price-list', cls:'opened'}") FİYAT LİSTELERİ
+                        ul
+                            li 
+                                span Fiyat Listesi #1
+                                a(href="javascript:void(0)") 
+                                    i.icon-download
+                            li 
+                                span Fiyat Listesi #2
+                                a(href="javascript:void(0)") 
+                                    i.icon-download
+                            li 
+                                span Fiyat Listesi #3
+                                a(href="javascript:void(0)") 
+                                    i.icon-download
+                            li 
+                                span Fiyat Listesi #4
+                                a(href="javascript:void(0)") 
+                                    i.icon-download
             .banner-item.uk-slidenav-position
-                a(href="javascript:void(0)")
-                    img(src="images/04.jpg") 
-                a(href="javascript:void(0)").uk-overlay-panel.uk-flex.uk-flex-center.uk-flex-middle.uk-flex-wrap.uk-flex-wrap-middle.banner-holder
+                img(src="images/04.jpg") 
+                .uk-overlay-panel.uk-flex.uk-flex-center.uk-flex-middle.uk-flex-wrap.uk-flex-wrap-middle.banner-holder
                     span.uk-text-center.uk-width-1-1.title Faber-Castel
-                    span.uk-text-center.uk-width-1-1.desc 216 Kataloğu
+                    .cat-options#catalog
+                        span(data-uk-toggle="{target:'#catalog', cls:'opened'}") KATALOGLAR
+                        ul
+                            li 
+                                span Katalog #1
+                                a(href="javascript:void(0)") 
+                                    i.icon-download
+                            li 
+                                span Katalog #2
+                                a(href="javascript:void(0)") 
+                                    i.icon-download
+                            li 
+                                span Katalog #3
+                                a(href="javascript:void(0)") 
+                                    i.icon-download
+                            li 
+                                span Katalog #4
+                                a(href="javascript:void(0)") 
+                                    i.icon-download

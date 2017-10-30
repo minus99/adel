@@ -49,19 +49,112 @@
         margin-top:15px;
         color: #07D;
     } 
+    .banner-box .cat-options{
+        min-width: 170px;
+        position: relative;
+        > span{
+            display: block;
+            width: 100%;
+            background: #fff;
+            border-radius: 3px;
+            padding: 11px 35px 10px 25px;
+            @include GothamBook;
+            font-size: 14px;
+            font-weight: 600;
+            color: $blue;
+            position: relative;
+            cursor: pointer;
+            &:after{
+                @extend [class^="icon-"]:before;
+                @extend .icon-tri-down:before;
+                font-size: 7px;
+                display: inline-block;
+                right: 20px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+
+            }
+        }
+        ul{
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 100;
+            width: 100%;
+            background: #fff;
+            padding: 0 12px 0 13px;
+            border-radius: 0 0 3px 3px;
+            box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.29);
+
+            visibility: hidden;
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+            transition: all 0.2s cubic-bezier(0.8, 0, 0.5, 1);
+            li{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px 0;
+                border-bottom: 1px solid #eaeaea;
+                @include GothamBook;
+                font-size: 13px;
+                font-weight: 500;
+                color: #000000;
+                cursor: default;
+                i{
+                    font-size: 14px;
+                    color: $blue;
+                    vertical-align: middle;
+                }
+                &:last-child{
+                    border-bottom: 0;
+                }
+            }
+        }
+        &.opened{
+            > span{
+                border-radius: 3px 3px 0 0;
+            }
+            ul{
+                visibility: visible;
+                opacity: 1;
+                height: auto;
+                overflow: auto;
+            }
+        }
+    }
 
     .main-slider{
         .uk-slidenav-position .uk-slidenav-previous {
             left: -5px;
-            display: none;
+            display: inline-block;
         }
         .uk-slidenav-position .uk-slidenav-next {
             right: -5px;
-            display: none;
+            display: inline-block;
         }
         .uk-dotnav{
             margin-bottom:8px;
-            display: none;
+            display: flex;
+            > li{
+                padding-left: 0px;
+                a{
+                    background: #d8d8d8;
+                    transform: scale(0.6);
+                }
+                &.uk-active a:after{
+                    content: " ";
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    border: 3px solid $blue;
+                    border-radius: 50%;
+                    position: absolute;
+                    z-index: 100;
+                }
+            }
         }
         .uk-dotnav > li{
             margin-top: 0;
